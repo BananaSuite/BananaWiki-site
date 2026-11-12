@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>BananaChat: lokale und gehostete Modelle in einem Chat</title>
+<meta name="description" content="Betreibe BananaChat selbst für deine Gruppe: lokale und gehostete Modelle, gemeinsame Kontingente, Dateien, API-Zugang und optionale Coding-Sitzungen in isolierten Arbeitsbereichen.">
+<link rel="stylesheet" href="../style.css?v=10e3c4edc171">
+<link rel="stylesheet" href="../mascot/mascot.css?v=d0df485fcacd">
+<script src="../mascot/mascot.js?v=a9cfc980d2fd" defer></script>
+<link rel="icon" type="image/png" href="../img/banana_yellow.png?v=ba9c9053f412">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png?v=4541d0cbd66c">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="it" href="index.it.html">
+</head>
+<body>
+<a class="skip-link" href="#content">Zum Inhalt springen</a>
+<header class="site-header">
+    <div class="container">
+        <div class="brand">
+            <button type="button" class="mascot" data-mascot data-mascot-clicks="11" aria-label="BananaChat-Maskottchen" title="BananaChat-Maskottchen" data-label-shades="BananaChat-Maskottchen mit Sonnenbrille" data-on="Deal with it." data-off="Sonnenbrille abgenommen." disabled><span class="mascot__body"><svg class="mascot-sprite" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true" focusable="false"><rect x="9" y="0" width="3" height="1" fill="#1a1408"/><rect x="9" y="1" width="1" height="1" fill="#1a1408"/><rect x="10" y="1" width="1" height="1" fill="#6e461e"/><rect x="11" y="1" width="1" height="1" fill="#1a1408"/><rect x="5" y="2" width="6" height="1" fill="#1a1408"/><rect x="4" y="3" width="1" height="1" fill="#1a1408"/><rect x="5" y="3" width="1" height="1" fill="#e2ba28"/><rect x="6" y="3" width="3" height="1" fill="#ffde4a"/><rect x="9" y="3" width="1" height="1" fill="#1a1408"/><rect x="3" y="4" width="1" height="1" fill="#1a1408"/><rect x="4" y="4" width="1" height="1" fill="#e2ba28"/><rect x="5" y="4" width="4" height="1" fill="#ffde4a"/><rect x="9" y="4" width="1" height="1" fill="#1a1408"/><rect x="3" y="5" width="1" height="1" fill="#1a1408"/><rect x="4" y="5" width="1" height="1" fill="#e2ba28"/><rect x="5" y="5" width="4" height="1" fill="#ffde4a"/><rect x="9" y="5" width="1" height="1" fill="#1a1408"/><rect x="2" y="6" width="1" height="1" fill="#1a1408"/><rect x="3" y="6" width="2" height="1" fill="#e2ba28"/><rect x="5" y="6" width="5" height="1" fill="#ffde4a"/><rect x="10" y="6" width="1" height="1" fill="#1a1408"/><rect x="2" y="7" width="1" height="1" fill="#1a1408"/><rect x="3" y="7" width="2" height="1" fill="#e2ba28"/><rect x="5" y="7" width="5" height="1" fill="#ffde4a"/><rect x="10" y="7" width="1" height="1" fill="#1a1408"/><rect x="2" y="8" width="1" height="1" fill="#1a1408"/><rect x="3" y="8" width="2" height="1" fill="#e2ba28"/><rect x="5" y="8" width="6" height="1" fill="#ffde4a"/><rect x="11" y="8" width="2" height="1" fill="#1a1408"/><rect x="2" y="9" width="1" height="1" fill="#1a1408"/><rect x="3" y="9" width="2" height="1" fill="#e2ba28"/><rect x="5" y="9" width="8" height="1" fill="#ffde4a"/><rect x="13" y="9" width="2" height="1" fill="#1a1408"/><rect x="2" y="10" width="1" height="1" fill="#1a1408"/><rect x="3" y="10" width="3" height="1" fill="#e2ba28"/><rect x="6" y="10" width="9" height="1" fill="#ffde4a"/><rect x="15" y="10" width="1" height="1" fill="#1a1408"/><rect x="3" y="11" width="1" height="1" fill="#1a1408"/><rect x="4" y="11" width="3" height="1" fill="#e2ba28"/><rect x="7" y="11" width="7" height="1" fill="#ffde4a"/><rect x="14" y="11" width="1" height="1" fill="#e2ba28"/><rect x="15" y="11" width="1" height="1" fill="#1a1408"/><rect x="3" y="12" width="1" height="1" fill="#1a1408"/><rect x="4" y="12" width="6" height="1" fill="#e2ba28"/><rect x="10" y="12" width="3" height="1" fill="#ffde4a"/><rect x="13" y="12" width="1" height="1" fill="#e2ba28"/><rect x="14" y="12" width="1" height="1" fill="#1a1408"/><rect x="4" y="13" width="2" height="1" fill="#1a1408"/><rect x="6" y="13" width="7" height="1" fill="#e2ba28"/><rect x="13" y="13" width="1" height="1" fill="#1a1408"/><rect x="6" y="14" width="7" height="1" fill="#1a1408"/><g class="mascot__eyes"><rect x="5" y="6" width="1" height="1" fill="#1a1408"/><rect x="8" y="6" width="1" height="1" fill="#1a1408"/><rect x="5" y="7" width="1" height="1" fill="#1a1408"/><rect x="8" y="7" width="1" height="1" fill="#1a1408"/></g><rect x="5" y="10" width="1" height="1" fill="#1a1408"/><rect x="8" y="10" width="1" height="1" fill="#1a1408"/><rect x="6" y="11" width="2" height="1" fill="#1a1408"/><g class="mascot__shades"><rect x="2" y="6" width="2" height="1" fill="#1a1408"/><rect x="4" y="6" width="1" height="1" fill="#ffffff"/><rect x="5" y="6" width="6" height="1" fill="#1a1408"/><rect x="4" y="7" width="2" height="1" fill="#1a1408"/><rect x="7" y="7" width="2" height="1" fill="#1a1408"/></g></svg></span></button>
+            <a class="brand-name" href="index.de.html">BananaChat</a>
+        </div>
+        <nav class="nav" aria-label="Hauptnavigation">
+            <a href="#features">Funktionen</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#install">Installation</a>
+            <a href="../index.de.html">BananaWiki</a>
+            <a class="nav-language" href="index.html" lang="en" hreflang="en">English</a>
+            <a class="nav-language" href="index.it.html" lang="it" hreflang="it">Italiano</a>
+            <a class="nav-button" href="https://github.com/BananaSuite/BananaChat">Quellcode auf GitHub</a>
+        </nav>
+    </div>
+</header>
+
+<main id="content">
+<section class="hero">
+    <div class="container">
+        <p class="eyebrow"><img src="../img/banana_yellow.png?v=ba9c9053f412" alt="" width="32" height="32">Ein Schwesterprojekt von BananaWiki</p>
+        <h1>Ein Chat für deine Gruppe, mit Modellen deiner Wahl</h1>
+        <p class="hero-lead">Betreibe einen Chat für deine Gruppe auf deinem eigenen Server, mit lokalen Ollama-Modellen oder externen Anbietern wie Anthropic, OpenAI und OpenRouter. Administratoren legen fest, wer welches Modell nutzen darf und wie viel.</p>
+        <div class="hero-actions">
+            <a class="button" href="#install">BananaChat installieren</a>
+            <a class="button button-secondary" href="#screenshots">Screenshots ansehen</a>
+        </div>
+        <p class="hero-note">BananaChat ist freie Software unter der GNU AGPL Version 3 und wird getrennt von BananaWiki installiert.</p>
+    </div>
+</section>
+
+<div class="band">
+    <div class="container">
+        <figure class="hero-figure">
+            <a class="hero-figure-link" href="../img/bananachat.png?v=bea8f65526ee" aria-label="Den Screenshot einer BananaChat-Unterhaltung in voller Größe öffnen"><img src="../img/bananachat.png?v=bea8f65526ee" alt="Eine Unterhaltung in BananaChat mit dem Chatverlauf in der Seitenleiste und der Auswahl von Modell, Denkaufwand und Persönlichkeit unter dem Nachrichtenfeld" width="1280" height="800" fetchpriority="high"></a>
+            <figcaption>Eine Unterhaltung und ihr Verlauf, mit Modell, Denkaufwand und Anhängen neben dem Nachrichtenfeld. Die Oberfläche ist auf Englisch zu sehen.</figcaption>
+        </figure>
+        <dl class="facts">
+            <div><dt>Lizenz</dt><dd>GNU AGPL Version 3</dd></div>
+            <div><dt>Modelle</dt><dd>Lokale Modelle, gehostete APIs und Abonnement-Pools</dd></div>
+            <div><dt>Voraussetzungen</dt><dd>Python 3.12 oder neuer und ein Modellanbieter</dd></div>
+            <div><dt>Oberfläche</dt><dd>Deutsch, Englisch und Italienisch, mit Verwaltung auf Englisch</dd></div>
+        </dl>
+    </div>
+</div>
+
+<section class="section" id="features" aria-labelledby="features-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="features-title">Funktionen</h2>
+            <p>Eine Installation versorgt eine Gruppe, etwa eine Klasse, ein Labor oder ein Büro. Alle haben ein eigenes Konto, und Administratoren legen fest, welche Modelle jede Person nutzen darf und wie viel.</p>
+        </header>
+        <div class="feature-groups">
+            <section class="feature-group">
+                <h3>Chatten</h3>
+                <ul>
+                    <li>Antworten im Stream, mit dem Gedankengang des Modells, wenn vorhanden</li>
+                    <li>Darstellung von Markdown und Code, mit Kopieren und Herunterladen bei jedem Codeblock</li>
+                    <li>Anhänge, darunter Bilder, PDFs, Text- und Codedateien</li>
+                    <li>Suche, Exporte, Links zum Teilen und Chats, die nicht in deinem Verlauf landen</li>
+                    <li>Gehostete Modelle funktionieren, wenn der lokale Modellserver ausfällt</li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>Persönlichkeiten</h3>
+                <ul>
+                    <li>Ein Avatar, eine Begrüßung, Gesprächseinstiege, ein bevorzugtes Modell und ein Antwortstil</li>
+                    <li>Eine Standardpersönlichkeit für neue Chats und Vorlagen als Ausgangspunkt</li>
+                    <li>Links zum Teilen sowie Import und Export als JSON</li>
+                    <li>Empfohlene Persönlichkeiten, die für alle veröffentlicht werden, mit Moderation</li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>API</h3>
+                <ul>
+                    <li>Eine OpenAI-kompatible API: Chat Completions, die Modellliste und Bilderzeugung</li>
+                    <li>Persönliche API-Schlüssel, nur lesend oder mit vollem Zugriff und optionalem Ablaufdatum, und ein Playground</li>
+                    <li>Die Schlüssel eines Kontos teilen sich sein Kontingent und seine Regeln für die Anfragerate</li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>Cloud-Sitzungen <span class="optional">(optional)</span></h3>
+                <ul>
+                    <li>Coding-Sitzungen mit einem Modell, das Werkzeuge aufrufen kann, in einer isolierten Sandbox</li>
+                    <li>Werkzeugaufrufe und Befehlsausgaben live, und die Dateien, die das Modell ändert</li>
+                    <li>Den Arbeitsbereich oder einen Git-Patch herunterladen oder eine weitere Anweisung senden, solange der Arbeitsbereich erhalten bleibt</li>
+                    <li>Standardmäßig aus, und Administratoren legen fest, wer eine Sitzung starten darf. Es gelten Grenzen für Modellzugriff, Tokens, Dauer und Ressourcen</li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>Verwaltung</h3>
+                <ul>
+                    <li>Benutzer und Einladungen sowie Bestätigung in zwei Schritten für jedes Konto, die für Administratoren vorgeschrieben werden kann</li>
+                    <li>Externe API-Anbieter mit verschlüsselt auf dem Server gespeicherten Schlüsseln, einem Verbindungstest und Modellen aus der eigenen Liste des Anbieters</li>
+                    <li>Voreinstellungen für Anthropic, OpenAI, OpenRouter, Google Gemini, Mistral und andere OpenAI-kompatible Dienste sowie für lokale Server wie LM Studio, vLLM, llama.cpp und LiteLLM (es gelten die Abrechnung und die Bedingungen des jeweiligen Anbieters)</li>
+                    <li>Pools aus Claude-Code- und Codex-Abonnementkonten, mit Nutzungsgrenzen und strikten Modellgrenzen <span class="optional">(optional, und die gemeinsame Nutzung braucht die Zustimmung des Anbieters)</span></li>
+                    <li>Zugriffsregeln pro Modell und Kategorie, Token-Kontingente pro 5 Stunden, optionale Wochenlimits und Regeln für die Anfragerate</li>
+                    <li>Metriken, ein Audit-Protokoll, Wartungsmodus und Gestaltung</li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>Betrieb</h3>
+                <ul>
+                    <li>Ein Befehl installiert, aktualisiert, sichert und stellt einen Server wieder her, und die erzeugte HTTPS-Proxy-Konfiguration funktioniert auch hinter Cloudflare</li>
+                    <li>Aktualisierungen folgen den Release-Tags, mit Abhängigkeiten, die über ihre Hashes festgelegt sind. Sie legen zuerst ein Backup an und werden zurückgerollt, wenn die neue Version nicht startet</li>
+                    <li>Backups, auf Wunsch verschlüsselt und authentifiziert in einem privaten Git-Repository</li>
+                    <li>Getrennte Web- und GPU-Server, freiwillige Worker-PCs und Bilderzeugung über ComfyUI</li>
+                    <li>Helle und dunkle Designs und Leseeinstellungen für jede Person, im Kontomenü unter Darstellung</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="screenshots" aria-labelledby="screenshots-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="screenshots-title">Screenshots</h2>
+            <p>Screenshots der aktuellen Version, auf Englisch und mit Beispielunterhaltungen und -konten.</p>
+        </header>
+        <div class="gallery">
+            <figure>
+                <a class="screenshot-link" href="../img/bananachat-models.png?v=1b97900d6872" aria-label="Den Screenshot der Modellauswahl in voller Größe öffnen"><img src="../img/bananachat-models.png?v=1b97900d6872" alt="Die Modellauswahl neben dem Nachrichtenfeld, mit den Namen der Modelle und ihren Funktionen" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <figcaption>Die Modellauswahl, mit Namen und Funktionen nebeneinander. Die Auswahl des Denkaufwands erscheint bei Modellen, die ihn unterstützen.</figcaption>
+            </figure>
+            <figure>
+                <a class="screenshot-link" href="../img/bananachat-customize.png?v=2d9ff24b1c21" aria-label="Den Screenshot der Darstellung in voller Größe öffnen"><img src="../img/bananachat-customize.png?v=2d9ff24b1c21" alt="Die Seite Darstellung in BananaChat mit Design, Sprache und Textgröße" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <figcaption>Die Darstellungseinstellungen, in denen jede Person Design, Sprache und Textgröße wählt.</figcaption>
+            </figure>
+            <figure>
+                <a class="screenshot-link" href="../img/bananachat-cloud-session.png?v=298bc225ef3c" aria-label="Den Screenshot der Cloud-Sitzung in voller Größe öffnen"><img src="../img/bananachat-cloud-session.png?v=298bc225ef3c" alt="Eine Coding-Sitzung mit Werkzeugaktivität, Befehlsausgaben und einem Dateibrowser für ihren Arbeitsbereich" width="1280" height="1282" loading="lazy" decoding="async"></a>
+                <figcaption>Eine Cloud-Sitzung, mit der Werkzeugaktivität neben den Dateien des Arbeitsbereichs.</figcaption>
+            </figure>
+            <figure>
+                <a class="screenshot-link" href="../img/bananachat-api.png?v=9838e1c1a93e" aria-label="Den Screenshot der API-Seite in voller Größe öffnen"><img src="../img/bananachat-api.png?v=9838e1c1a93e" alt="Die API-Seite: das Token-Kontingent für fünf Stunden, die Anfragerate und die API-Schlüssel" width="1280" height="2000" loading="lazy" decoding="async"></a>
+                <figcaption>API-Schlüssel und Nutzung, mit deinem Kontingent, deiner Anfragerate und deinen Schlüsseln.</figcaption>
+            </figure>
+            <figure>
+                <a class="screenshot-link" href="../img/bananachat-providers.png?v=82537911fbed" aria-label="Den Screenshot der Anbieter in voller Größe öffnen"><img src="../img/bananachat-providers.png?v=82537911fbed" alt="Externe API-Anbieter in der Verwaltung: Voreinstellungen, Basis-URLs und die Modelle jedes Anbieters" width="1280" height="2176" loading="lazy" decoding="async"></a>
+                <figcaption>Die Anbieterseite, auf der du eine Basis-URL und einen Schlüssel einträgst, die Verbindung prüfst und wählst, welche Modelle deine Gruppe nutzen darf.</figcaption>
+            </figure>
+            <figure>
+                <a class="screenshot-link" href="../img/bananachat-claude-pool.png?v=aaa7b6ad7dc5" aria-label="Den Screenshot des Abonnement-Pools in voller Größe öffnen"><img src="../img/bananachat-claude-pool.png?v=aaa7b6ad7dc5" alt="Ein Pool aus Claude-Code-Abonnements in der Verwaltung: die Konten mit ihrem verbleibenden Kontingent für fünf Stunden und für die Woche" width="1280" height="3968" loading="lazy" decoding="async"></a>
+                <figcaption>Abonnement-Pools, die zeigen, was jedem Konto bleibt und welchen Anteil es nutzen darf. Codex-Pools sehen genauso aus.</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="install" aria-labelledby="install-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="install-title">Installation</h2>
+            <p>Probier es zuerst auf deinem eigenen Computer aus. Für eine Gruppe sind zwei Rechner üblich: ein GPU-Server, auf dem die Modelle laufen, und ein Webserver, der Konten und Chats speichert.</p>
+        </header>
+        <div class="columns">
+            <div>
+                <h3>Auf deinem Computer</h3>
+<pre class="code" tabindex="0"><code><span class="comment"># Python 3.12 oder neuer, und Ollama mit einem Modell</span>
+ollama pull qwen3:4b
+git clone https://github.com/BananaSuite/BananaChat.git
+cd BananaChat
+./dev.sh</code></pre>
+                <p class="note">Öffne dann http://127.0.0.1:8000. Das Terminal gibt das Token aus, mit dem du den ersten Administrator anlegst, und der Server ist nur auf deinem eigenen Rechner erreichbar.</p>
+            </div>
+            <div>
+                <h3>Auf zwei Linux-Servern</h3>
+<pre class="code" tabindex="0"><code><span class="comment"># auf beiden Servern das neueste Release auschecken</span>
+git clone https://github.com/BananaSuite/BananaChat.git
+cd BananaChat
+git checkout "$(git tag --list 'v*' --sort=-v:refname | head -n 1)"
+
+<span class="comment"># auf dem GPU-Server (gibt einen Kopplungscode aus)</span>
+sudo ./banana install --mode compute --domain compute.example.org
+sudo bananachat proxy --install
+
+<span class="comment"># auf dem Webserver</span>
+sudo ./banana install --domain chat.example.org --pair
+sudo bananachat proxy --install</code></pre>
+                <p class="note">Nutze auf beiden Servern dasselbe Release und halte den Kopplungscode geheim. Um alles auf einem Rechner zu betreiben, nimm <code>--mode single</code>. Um ein bereits laufendes Ollama weiter zu nutzen, nimm <code>--ollama-url</code>. Die <a href="https://github.com/BananaSuite/BananaChat/blob/main/docs/deployment.md">Anleitung zur Bereitstellung</a> und die <a href="https://github.com/BananaSuite/BananaChat/blob/main/docs/backups.md">Anleitung zu Backups</a> (auf Englisch) erklären den Rest.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="privacy" aria-labelledby="privacy-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="privacy-title">Wohin die Unterhaltungen gehen</h2>
+        </header>
+        <div class="faq-list">
+            <details>
+                <summary>Wo werden Chats gespeichert?</summary>
+                <p>Chats werden in der SQLite-Datenbank des Servers gespeichert. Lokale Ollama-Modelle laufen auf deiner eigenen Hardware, während ein Cloud-Anbieter, den du einrichtest, die Anfragen erhält und seine eigenen Datenschutzbedingungen anwendet.</p>
+            </details>
+            <details>
+                <summary>Wo laufen Cloud-Sitzungen?</summary>
+                <p>Werkzeuge laufen in einem isolierten Arbeitsbereich auf dem Sandbox-Runner, den der Administrator eingerichtet hat. Anweisungen, Dateiinhalte und Werkzeugergebnisse können an den gewählten Modellanbieter gesendet werden, und Administratoren können die Sitzungsprotokolle einsehen. Arbeitsbereiche laufen nach der eingestellten Aufbewahrungsfrist ab, also lade die Dateien herunter, die du behalten willst.</p>
+            </details>
+            <details>
+                <summary>Welche Modelle unterstützen Cloud-Sitzungen?</summary>
+                <p>Modelle, die Werkzeuge aufrufen können, über Ollama oder einen externen API-Anbieter. Cloud-Sitzungen bleiben aus, bis ein Administrator den Runner einrichtet und sie einschaltet.</p>
+            </details>
+            <details>
+                <summary>Sind Chats ohne Verlauf privat?</summary>
+                <p>Sie erscheinen nicht in deinem Verlauf und werden nach einer Zeit gelöscht, die der Administrator festlegt. Administratoren können sie trotzdem in einem Audit-Protokoll einsehen, und die Oberfläche weist dich darauf hin.</p>
+            </details>
+            <details>
+                <summary>Wer kann Prompts lesen, wenn Worker-PCs genutzt werden?</summary>
+                <p>Die Menschen, die diese Worker-PCs betreiben, können die Nachrichten, den Gesprächskontext und die Bilder lesen, die an ihre Rechner gehen. Worker-PCs sind aus, bis ein Administrator sie hinzufügt.</p>
+            </details>
+            <details>
+                <summary>Was gibt ein Link zum Teilen preis?</summary>
+                <p>Alle, die den Link haben, können die geteilte Unterhaltung lesen.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="story" aria-labelledby="story-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="story-title">Wie es mit BananaWiki zusammenhängt</h2>
+        </header>
+        <div class="story">
+            <p>BananaChat begann als BananaAI, eine Möglichkeit, KI-Modelle auf eigener Hardware zu betreiben. Es entstand als Teil von BananaWiki und wurde später zu einer eigenen Anwendung.</p>
+            <p>Die beiden sind getrennte Programme mit eigenen Installationen und Konten, und BananaWiki enthält kein Sprachmodell. Luca Zani hat beide entwickelt und pflegt sie mit Mitwirkenden. Die Seite <a href="../about/index.de.html">Über uns</a> erzählt die ganze Geschichte.</p>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div>
+            <a class="footer-logo" href="../index.de.html"><img src="../img/banana_yellow.png?v=ba9c9053f412" alt="" width="32" height="32">BananaWiki</a>
+            <p>Gepflegt von Luca Zani und Mitwirkenden.</p>
+            <p>Freie Software unter der GNU AGPL Version 3.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Fußzeile">
+            <a href="https://hosting.bananawiki.com/help?lang=de" data-only="available">Hilfe</a>
+            <a href="../about/index.de.html">Über uns</a>
+            <a href="../terms/index.de.html">Nutzungsbedingungen</a>
+            <a href="../privacy/index.de.html">Datenschutz</a>
+            <a href="https://status.bananawiki.com">Dienststatus</a>
+            <a href="https://github.com/BananaSuite/BananaChat">Quellcode von BananaChat</a>
+            <!--email_off--><a href="mailto:contact@bananawiki.com">Kontakt</a><!--/email_off-->
+        </nav>
+    </div>
+</footer>
+</body>
+</html>

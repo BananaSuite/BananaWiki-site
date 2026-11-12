@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>BananaWiki: ein privates Wiki für Teams, Klassen und kleine Organisationen</title>
+<meta name="description" content="Schreib Seiten in Markdown, behalte jede Version und lege fest, wer welchen Teil lesen oder ändern darf. Nutze den gehosteten Dienst oder betreibe dieselbe freie Software auf deinem eigenen Server.">
+<link rel="stylesheet" href="style.css?v=10e3c4edc171">
+<link rel="stylesheet" href="mascot/mascot.css?v=d0df485fcacd">
+<script src="mascot/mascot.js?v=a9cfc980d2fd" defer></script>
+<link rel="icon" type="image/png" href="img/banana_yellow.png?v=ba9c9053f412">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=4541d0cbd66c">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="it" href="index.it.html">
+</head>
+<body>
+<a class="skip-link" href="#content">Zum Inhalt springen</a>
+<header class="site-header">
+    <div class="container">
+        <div class="brand">
+            <button type="button" class="mascot" data-mascot data-mascot-clicks="11" aria-label="BananaWiki-Maskottchen" title="BananaWiki-Maskottchen" data-label-shades="BananaWiki-Maskottchen mit Sonnenbrille" data-on="Deal with it." data-off="Sonnenbrille abgenommen." disabled><span class="mascot__body"><svg class="mascot-sprite" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true" focusable="false"><rect x="9" y="0" width="3" height="1" fill="#1a1408"/><rect x="9" y="1" width="1" height="1" fill="#1a1408"/><rect x="10" y="1" width="1" height="1" fill="#6e461e"/><rect x="11" y="1" width="1" height="1" fill="#1a1408"/><rect x="5" y="2" width="6" height="1" fill="#1a1408"/><rect x="4" y="3" width="1" height="1" fill="#1a1408"/><rect x="5" y="3" width="1" height="1" fill="#e2ba28"/><rect x="6" y="3" width="3" height="1" fill="#ffde4a"/><rect x="9" y="3" width="1" height="1" fill="#1a1408"/><rect x="3" y="4" width="1" height="1" fill="#1a1408"/><rect x="4" y="4" width="1" height="1" fill="#e2ba28"/><rect x="5" y="4" width="4" height="1" fill="#ffde4a"/><rect x="9" y="4" width="1" height="1" fill="#1a1408"/><rect x="3" y="5" width="1" height="1" fill="#1a1408"/><rect x="4" y="5" width="1" height="1" fill="#e2ba28"/><rect x="5" y="5" width="4" height="1" fill="#ffde4a"/><rect x="9" y="5" width="1" height="1" fill="#1a1408"/><rect x="2" y="6" width="1" height="1" fill="#1a1408"/><rect x="3" y="6" width="2" height="1" fill="#e2ba28"/><rect x="5" y="6" width="5" height="1" fill="#ffde4a"/><rect x="10" y="6" width="1" height="1" fill="#1a1408"/><rect x="2" y="7" width="1" height="1" fill="#1a1408"/><rect x="3" y="7" width="2" height="1" fill="#e2ba28"/><rect x="5" y="7" width="5" height="1" fill="#ffde4a"/><rect x="10" y="7" width="1" height="1" fill="#1a1408"/><rect x="2" y="8" width="1" height="1" fill="#1a1408"/><rect x="3" y="8" width="2" height="1" fill="#e2ba28"/><rect x="5" y="8" width="6" height="1" fill="#ffde4a"/><rect x="11" y="8" width="2" height="1" fill="#1a1408"/><rect x="2" y="9" width="1" height="1" fill="#1a1408"/><rect x="3" y="9" width="2" height="1" fill="#e2ba28"/><rect x="5" y="9" width="8" height="1" fill="#ffde4a"/><rect x="13" y="9" width="2" height="1" fill="#1a1408"/><rect x="2" y="10" width="1" height="1" fill="#1a1408"/><rect x="3" y="10" width="3" height="1" fill="#e2ba28"/><rect x="6" y="10" width="9" height="1" fill="#ffde4a"/><rect x="15" y="10" width="1" height="1" fill="#1a1408"/><rect x="3" y="11" width="1" height="1" fill="#1a1408"/><rect x="4" y="11" width="3" height="1" fill="#e2ba28"/><rect x="7" y="11" width="7" height="1" fill="#ffde4a"/><rect x="14" y="11" width="1" height="1" fill="#e2ba28"/><rect x="15" y="11" width="1" height="1" fill="#1a1408"/><rect x="3" y="12" width="1" height="1" fill="#1a1408"/><rect x="4" y="12" width="6" height="1" fill="#e2ba28"/><rect x="10" y="12" width="3" height="1" fill="#ffde4a"/><rect x="13" y="12" width="1" height="1" fill="#e2ba28"/><rect x="14" y="12" width="1" height="1" fill="#1a1408"/><rect x="4" y="13" width="2" height="1" fill="#1a1408"/><rect x="6" y="13" width="7" height="1" fill="#e2ba28"/><rect x="13" y="13" width="1" height="1" fill="#1a1408"/><rect x="6" y="14" width="7" height="1" fill="#1a1408"/><g class="mascot__eyes"><rect x="5" y="6" width="1" height="1" fill="#1a1408"/><rect x="8" y="6" width="1" height="1" fill="#1a1408"/><rect x="5" y="7" width="1" height="1" fill="#1a1408"/><rect x="8" y="7" width="1" height="1" fill="#1a1408"/></g><rect x="5" y="10" width="1" height="1" fill="#1a1408"/><rect x="8" y="10" width="1" height="1" fill="#1a1408"/><rect x="6" y="11" width="2" height="1" fill="#1a1408"/><g class="mascot__shades"><rect x="2" y="6" width="2" height="1" fill="#1a1408"/><rect x="4" y="6" width="1" height="1" fill="#ffffff"/><rect x="5" y="6" width="6" height="1" fill="#1a1408"/><rect x="4" y="7" width="2" height="1" fill="#1a1408"/><rect x="7" y="7" width="2" height="1" fill="#1a1408"/></g></svg></span></button>
+            <a class="brand-name" href="index.de.html">BananaWiki</a>
+        </div>
+        <nav class="nav" aria-label="Hauptnavigation">
+            <a href="#features">Funktionen</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#hosting">Hosting</a>
+            <a href="bananachat/index.de.html">BananaChat</a>
+            <a class="nav-language" href="index.html" lang="en" hreflang="en">English</a>
+            <a class="nav-language" href="index.it.html" lang="it" hreflang="it">Italiano</a>
+            <a class="nav-button" href="https://hosting.bananawiki.com/login">Anmelden</a>
+        </nav>
+    </div>
+</header>
+
+<main id="content">
+<section class="hero">
+    <div class="container">
+        <h1>Ein Wiki für die Notizen, Anleitungen und Entscheidungen deines Teams</h1>
+        <p class="hero-lead">Schreib Seiten in Markdown mit Live-Vorschau, behalte jede Version und lege für jede Kategorie fest, wer sie lesen oder bearbeiten darf. Nutze den gehosteten Dienst oder betreibe dieselbe freie Software auf deinem eigenen Server.</p>
+        <div class="hero-actions">
+            <a class="button" href="https://hosting.bananawiki.com/signup">Gehostetes Wiki erstellen</a>
+            <a class="button button-secondary" href="#self-host">Selbst betreiben</a>
+        </div>
+    </div>
+</section>
+
+<div class="band">
+    <div class="container">
+        <figure class="hero-figure">
+            <a class="hero-figure-link" href="img/wiki-home.png?v=4f28610a80b4" aria-label="Den Screenshot der Startseite eines Wikis in voller Größe öffnen"><img src="img/wiki-home.png?v=4f28610a80b4" alt="Die Startseite eines Team-Wikis mit Links zu Handbuchseiten und einer Tabelle mit Arbeitsbereichen, Verantwortlichen und Status; die Kategorien stehen in der Seitenleiste" width="1280" height="800" fetchpriority="high"></a>
+            <figcaption>Eine Wiki-Seite, mit Seiten und Kategorien in der Seitenleiste und der Gliederung der Seite daneben. Die Oberfläche ist auf Englisch zu sehen.</figcaption>
+        </figure>
+        <dl class="facts">
+            <div><dt>Lizenz</dt><dd>GNU AGPL Version 3</dd></div>
+            <div><dt>Oberfläche</dt><dd>Deutsch, Englisch und Italienisch</dd></div>
+            <div><dt>Entwickelt mit</dt><dd>Python und SQLite</dd></div>
+            <div><dt>Gehosteter Dienst</dt><dd>Server in der EU</dd></div>
+        </dl>
+    </div>
+</div>
+
+<!-- shared:features -->
+<section class="section" id="features" aria-labelledby="features-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="features-title">Funktionen</h2>
+            <p>Optionale Funktionen sind anfangs ausgeschaltet, und ein Administrator kann sie einschalten. Wenn du eine Funktion ausschaltest, bleiben ihre Daten erhalten.</p>
+        </header>
+        <div class="feature-groups">
+            <section class="feature-group">
+                <h3>Schreiben</h3>
+                <ul>
+                    <li>Markdown-Editor mit Werkzeugleiste und Live-Vorschau</li>
+                    <li>Entwürfe, die beim Tippen gespeichert werden, und eine Warnung, wenn zwei Personen dieselbe Seite speichern</li>
+                    <li>Bilder, die du im Editor zuschneiden, in der Größe ändern und ausrichten kannst; Anhänge und eingebettete Videos</li>
+                    <li>Volltextsuche in allen Seiten, die du lesen darfst</li>
+                    <li>Seiten als Markdown oder PDF exportieren; Markdown-Import und -Export für viele Seiten auf einmal</li>
+                    <li>Ein Seitenbaukasten für Layouts aus Blöcken <span class="optional">(optional)</span></li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>Verlauf und Prüfung</h3>
+                <ul>
+                    <li>Jede Version bleibt erhalten und lässt sich vergleichen und wiederherstellen</li>
+                    <li>Ein Audit-Protokoll mit Anmeldungen, Rollenänderungen und anderen Verwaltungsvorgängen</li>
+                    <li>Eine Liste aller Anfragen, die auf eine Entscheidung warten, mit Benachrichtigungen per E-Mail, wenn der E-Mail-Versand eingerichtet ist</li>
+                    <li>Geschützte Seiten und Reservierungen, mit denen eine Person eine Seite zum Bearbeiten für sich reserviert <span class="optional">(optional)</span></li>
+                    <li>Änderungen, die Leser vorschlagen und die nach einer Prüfung übernommen werden <span class="optional">(optional)</span></li>
+                    <li>Gelöschte Seiten bleiben 48 Stunden erhalten <span class="optional">(optional)</span></li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>Personen und Zugriff</h3>
+                <ul>
+                    <li>Rollen vom Benutzer bis zum Eigentümer, dazu eigene Rollen aus einzelnen Berechtigungen</li>
+                    <li>Lese- und Schreibzugriff pro Kategorie</li>
+                    <li>Einladungscodes, offene Registrierung mit Enddatum und Freischaltung neuer Konten</li>
+                    <li>Standardmäßig privat, mit optionalem öffentlichem Lesezugang</li>
+                    <li>Bestätigung in zwei Schritten mit einer Authenticator-App, die du für Administratoren vorschreiben kannst</li>
+                    <li>Geplantes Löschen von Seiten und Konten sowie befristete Rollen <span class="optional">(optional)</span></li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>Zusammenarbeiten</h3>
+                <ul>
+                    <li>Kanban-Boards mit Checklisten, Fälligkeitsdaten, Kommentaren, Anhängen und Verlauf</li>
+                    <li>Canvas mit Formen, Notizen und Links zu Seiten, und eine Textgliederung für Screenreader</li>
+                    <li>Direktnachrichten und Gruppenchats, in denen Mitglieder jemanden blockieren und eine Nachricht melden können</li>
+                    <li>Ankündigungsbanner auf der ganzen Website</li>
+                    <li>Mitgliederprofile mit Abzeichen und einem Diagramm der Beiträge</li>
+                    <li>Eine Bestenliste der Mitwirkenden <span class="optional">(optional)</span></li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>Lesen und Lernen</h3>
+                <ul>
+                    <li>Vorlesen von Seiten mit Piper-Stimmen, nachdem du die Stimmen installiert hast</li>
+                    <li>Quiz und Umfragen auf einer Seite, mit Punkten und einer Begrenzung der Versuche</li>
+                    <li>Abzeichen, die von Hand verliehen oder automatisch verdient werden</li>
+                    <li>Schwierigkeitsgrade für Seiten</li>
+                    <li>Persönliche Einstellungen für Textgröße, Abstände, Kontrast und eine legastheniefreundliche Schrift, im Kontomenü unter Darstellung</li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>Das Wiki betreiben</h3>
+                <ul>
+                    <li>Oberfläche auf Deutsch, Englisch und Italienisch, und du kannst weitere Sprachen hochladen</li>
+                    <li>Helle und dunkle Designs in Farben deiner Wahl</li>
+                    <li>Eine geführte Tour für neue Mitglieder und ein einfacher Modus, der die erweiterten Werkzeuge ausblendet</li>
+                    <li>Export persönlicher Daten für jedes Mitglied sowie Export und Import der ganzen Website für Administratoren</li>
+                    <li>REST-API mit Tokens für ausgewählte Bereiche und Webhooks <span class="optional">(optional)</span></li>
+                    <li>Eigene Seiten unter einer Adresse deiner Wahl <span class="optional">(optional)</span></li>
+                    <li>Seiten, die schreibgeschützt mit anderen BananaWiki-Installationen geteilt werden <span class="optional">(optional)</span></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</section>
+<!-- /shared:features -->
+
+<!-- shared:screenshots -->
+<section class="section" id="screenshots" aria-labelledby="screenshots-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="screenshots-title">Screenshots</h2>
+            <p>Screenshots der aktuellen Version, auf Englisch und mit Beispieldaten.</p>
+        </header>
+        <div class="gallery">
+            <figure>
+                <a class="screenshot-link" href="img/editor.png?v=2b7ecac62446" aria-label="Den Screenshot des Editors in voller Größe öffnen"><img src="img/editor.png?v=2b7ecac62446" alt="Der Seiteneditor: Markdown links und die Vorschau rechts, darüber die Werkzeuge zum Formatieren" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <figcaption>Der Editor, mit Markdown links und der Vorschau rechts.</figcaption>
+            </figure>
+            <figure>
+                <a class="screenshot-link" href="img/editor-images.png?v=5c1d27086790" aria-label="Den Screenshot der Bildoptionen in voller Größe öffnen"><img src="img/editor-images.png?v=5c1d27086790" alt="Der Dialog mit den Bildoptionen über dem Seiteneditor: ein Zuschneiderahmen auf dem Bild, dann Alternativtext, Breite, Ausrichtung und Abstand" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <figcaption>Mit den Bildoptionen fügst du einen Alternativtext hinzu, legst Größe und Ausrichtung fest oder schneidest das Bild zu. Die Originaldatei bleibt unverändert.</figcaption>
+            </figure>
+            <figure>
+                <a class="screenshot-link" href="img/wiki-customize.png?v=00cdd0a50cf1" aria-label="Den Screenshot der Darstellung in voller Größe öffnen"><img src="img/wiki-customize.png?v=00cdd0a50cf1" alt="Die Einstellungen der Darstellung: Design, Textgröße, Kontrast und Abstände" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <figcaption>Die Darstellungseinstellungen, in denen jede Person Design, Textgröße, Kontrast und Abstände wählt.</figcaption>
+            </figure>
+            <figure>
+                <a class="screenshot-link" href="img/kanban.png?v=44b83df591cc" aria-label="Den Screenshot des Kanban-Boards in voller Größe öffnen"><img src="img/kanban.png?v=44b83df591cc" alt="Ein Kanban-Board mit Karten in den Spalten To do, In progress und Done" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <figcaption>Ein Kanban-Board, auf dem jede Karte ihre Kommentare, ihre Checkliste und ihren Verlauf behält.</figcaption>
+            </figure>
+            <figure>
+                <a class="screenshot-link" href="img/canvas.png?v=508da8d466ff" aria-label="Den Screenshot des Canvas in voller Größe öffnen"><img src="img/canvas.png?v=508da8d466ff" alt="Ein Canvas mit Notizen, die durch beschriftete Pfeile verbunden sind" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <figcaption>Ein Canvas mit Notizen und Verbindungen. Canvases haben einen Verlauf, genau wie Seiten.</figcaption>
+            </figure>
+            <figure>
+                <a class="screenshot-link" href="img/plugins.png?v=e3441299f6b0" aria-label="Den Screenshot der Funktionen in voller Größe öffnen"><img src="img/plugins.png?v=e3441299f6b0" alt="Die Seite der Funktionen in der Verwaltung: die eingebauten Werkzeuge mit Status und Aktionen" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <figcaption>Die Funktionsseite, auf der du Werkzeuge ein- oder ausschaltest. Wenn du ein Werkzeug ausschaltest, bleiben seine Daten erhalten.</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+<!-- /shared:screenshots -->
+
+<section class="section" id="hosting" aria-labelledby="hosting-title">
+    <div class="container">
+        <div class="section-split">
+            <header class="section-header">
+                <h2 id="hosting-title">Gehostet oder auf deinem eigenen Server</h2>
+                <p>Beides läuft mit demselben Code, also kannst du das ganze Wiki als ein Archiv exportieren und auf der anderen Seite importieren.</p>
+                <div class="section-actions">
+                    <a class="button" href="https://hosting.bananawiki.com/signup">Gehostetes Wiki erstellen</a>
+                    <a class="button button-secondary" href="https://hosting.bananawiki.com/help/getting-started?lang=de">So funktioniert der gehostete Dienst</a>
+                </div>
+            </header>
+            <figure class="hosting-figure">
+                <a class="screenshot-link" href="img/hosting-dashboard.png?v=2a716a79d5d5" aria-label="Den Screenshot des Hosting-Dashboards in voller Größe öffnen"><img src="img/hosting-dashboard.png?v=2a716a79d5d5" alt="Das Hosting-Dashboard: eine Liste von Wikis mit Adresse, Status, Restlaufzeit und Speicher" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <figcaption>Das Hosting-Dashboard, das jedes Wiki mit Adresse, Status, Restlaufzeit und Speicher zeigt.</figcaption>
+            </figure>
+        </div>
+        <table class="comparison">
+            <thead>
+                <tr><th scope="col"><span class="visually-hidden">Thema</span></th><th scope="col">BananaWiki Hosting</th><th scope="col">Dein eigener Server</th></tr>
+            </thead>
+            <tbody>
+                <tr><th scope="row">Der Einstieg</th><td data-label="Gehostet">Registriere dich und erstelle dann im Dashboard ein Wiki.</td><td data-label="Dein eigener Server">Ein Befehl auf einem Linux-Server, Docker Compose, ein paar Befehle auf jedem Computer mit Python oder BananaWiki Desktop.</td></tr>
+                <tr><th scope="row">Wo die Daten liegen</th><td data-label="Gehostet">Auf Servern in der Europäischen Union, mit einem isolierten Container pro Wiki.</td><td data-label="Dein eigener Server">Dort, wo du es installierst.</td></tr>
+                <tr><th scope="row">Kosten und Grenzen</th><td data-label="Gehostet">Das Portal zeigt sie an, bevor du ein Wiki erstellst. Neue Wikis beginnen als Testphase mit Enddatum, und du kannst eine Verlängerung beantragen.</td><td data-label="Dein eigener Server">Die Software ist kostenlos, und den Rechner stellst du.</td></tr>
+                <tr><th scope="row">Aktualisierungen</th><td data-label="Gehostet">Der Betreiber spielt sie ein.</td><td data-label="Dein eigener Server">Jede Aktualisierung installiert den neuesten Release-Tag, mit jeder Abhängigkeit über ihren Hash festgelegt. Vorher legt sie ein Backup an, und sie wird zurückgerollt, wenn das Wiki nicht startet. Automatische Aktualisierungen sind aus, bis du sie einschaltest, und sie akzeptieren nur Release-Tags, die mit Schlüsseln signiert sind, denen du vertraust, es sei denn, du erlaubst unsignierte.</td></tr>
+                <tr><th scope="row">Backups</th><td data-label="Gehostet">Der Betreiber erstellt Backups, und du kannst Exporte selbst herunterladen.</td><td data-label="Dein eigener Server">Backup-Pakete, dazu auf Wunsch verschlüsselte und authentifizierte Backups in ein privates GitHub- oder Forgejo-Repository.</td></tr>
+                <tr><th scope="row">Eigene Domain</th><td data-label="Gehostet">Ja, sobald der Betreiber sie für dein Wiki erlaubt.</td><td data-label="Dein eigener Server">Ja.</td></tr>
+                <tr><th scope="row">Öffentlicher Lesezugang und Seitenbaukasten</th><td data-label="Gehostet">Auf Anfrage für dein Wiki verfügbar.</td><td data-label="Dein eigener Server">Du kannst sie selbst einschalten.</td></tr>
+                <tr><th scope="row">Wechseln</th><td data-label="Gehostet">Exportiere das ganze Wiki jederzeit und <a href="https://hosting.bananawiki.com/help/move-to-your-own-server?lang=de">importiere es auf deinem eigenen Server</a>.</td><td data-label="Dein eigener Server">Liegt schon auf deinem Server.</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- shared:self-host -->
+<section class="section" id="self-host" aria-labelledby="self-host-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="self-host-title">Selbst betreiben</h2>
+            <p>Der Quellcode liegt auf GitHub unter der GNU AGPL, und du kannst ihn privat, in der Schule und kommerziell nutzen. Wenn du eine veränderte Version betreibst, die andere Menschen über ein Netzwerk nutzen, verlangt die Lizenz, dass du ihnen den Quellcode zur Verfügung stellst.</p>
+        </header>
+        <div class="columns">
+            <ol class="install-options">
+                <li>
+                    <h3>Ein Linux-Server</h3>
+                    <p>Klone das Repository und wechsle zu seinem neuesten Release-Tag, wie es das <a href="https://github.com/BananaSuite/BananaWiki#quick-start">README</a> (auf Englisch) zeigt. <code>sudo ./banana install --mode wiki --domain wiki.example.org</code> installiert das Wiki als Systemdienst, und <code>sudo bananawiki proxy --install</code> richtet Caddy für HTTPS ein. Die <a href="https://github.com/BananaSuite/BananaWiki/blob/main/docs/deployment.md">Anleitung zur Bereitstellung</a> (auf Englisch) erklärt Aktualisierungen und Backups.</p>
+                </li>
+                <li>
+                    <h3>Docker Compose</h3>
+                    <p>Ein Wiki hinter Caddy mit automatischem HTTPS, aus der <code>compose.yaml</code> im Repository.</p>
+                </li>
+                <li>
+                    <h3>Jeder Computer mit Python 3.11 oder neuer</h3>
+                    <p>Der Schnellstart unten startet ein Wiki auf deinem eigenen Rechner, damit du es ausprobieren kannst. Mehr Details stehen in der <a href="https://github.com/BananaSuite/BananaWiki/blob/main/docs/getting-started.md">Einstiegsanleitung</a> (auf Englisch).</p>
+                </li>
+                <li>
+                    <h3>Ein Computer, kein Server</h3>
+                    <p><a href="https://github.com/BananaSuite/BananaWiki/blob/main/docs/desktop.md">BananaWiki Desktop</a> (auf Englisch) betreibt ein Wiki aus einem kleinen Fenster unter Windows, macOS oder Linux und eignet sich für eine Klasse oder ein Büro. Es wird aus demselben Quellcode gebaut, enthält aber keine Vorlesefunktion.</p>
+                </li>
+                <li>
+                    <h3>Ein eigener Hosting-Dienst</h3>
+                    <p>Derselbe Code betreibt die <a href="https://github.com/BananaSuite/BananaWiki/blob/main/docs/hosting.md">Hosting-Plattform</a> (auf Englisch), die für jeden Kunden ein Wiki erstellt. Sie braucht einen Linux-x86_64-Server mit Docker, einschließlich BuildKit (<code>docker buildx</code>), und Caddy. Wir empfehlen XFS mit Projekt-Quotas, die die Plattform automatisch nutzt, um jedem Wiki eine harte Speichergrenze zu geben. Auf anderen Dateisystemen prüft die App Uploads, und das Portal prüft die Größe jedes Wikis alle 5 Minuten. Das genügt, wenn alle Wikis dir gehören, aber für einen öffentlichen Dienst solltest du XFS verwenden.</p>
+                </li>
+            </ol>
+            <div>
+                <h3>Schnellstart</h3>
+<pre class="code" tabindex="0"><code>git clone https://github.com/BananaSuite/BananaWiki.git
+cd BananaWiki
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e .
+bananawiki serve
+<span class="comment"># in einem zweiten Terminal (gleicher Ordner und gleiche venv)</span>
+<span class="comment"># das Token ausgeben, nach dem die Einrichtungsseite fragt</span>
+bananawiki setup-token</code></pre>
+                <p class="note">Öffne dann http://127.0.0.1:5001 und gib das Token ein, um das erste Konto anzulegen. Unter Windows aktivierst du die Umgebung mit <code>.venv\Scripts\activate</code>. Für die Vorlesefunktion führe außerdem <code>python -m pip install -e '.[tts]'</code> aus und installiere ffmpeg. Dieser Server ist nur zum Ausprobieren von BananaWiki gedacht. Für ein Wiki, das andere Menschen nutzen, folge der Anleitung zur Bereitstellung.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /shared:self-host -->
+
+<!-- shared:story -->
+<section class="section" id="story" aria-labelledby="story-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="story-title">Wie alles begann</h2>
+        </header>
+        <div class="story">
+            <p>Luca Zani startete BananaWiki am 20. Februar 2026 für ein Team, das ein Wiki für seine Arbeit brauchte. Im Juni nahm die Entwicklung Fahrt auf, und BananaWiki wurde zu dem Wiki mit Hosting-Plattform, das es heute ist. Seit September 2026 ist es freie Software, gepflegt von Luca Zani und Mitwirkenden.</p>
+            <p>Daneben sind zwei kleinere Projekte entstanden. <a href="https://github.com/BananaSuite/BananaChat">BananaChat</a> begann als BananaAI und gibt einer Gruppe einen gemeinsamen Chat mit lokalen und gehosteten Sprachmodellen. <a href="https://github.com/BananaSuite/BananaVibe">BananaVibe</a> lässt Coding-Agents an einer langen Aufgabe arbeiten, bis sie erledigt und geprüft ist. Die Seite <a href="about/index.de.html">Über uns</a> erzählt die ganze Geschichte.</p>
+        </div>
+    </div>
+</section>
+<!-- /shared:story -->
+
+<section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="faq-title">Fragen</h2>
+        </header>
+        <div class="faq-list">
+            <details>
+                <summary>Ist es freie Software?</summary>
+                <p>Ja. BananaWiki steht unter der GNU AGPL Version 3, und du kannst es privat und kommerziell nutzen. Der gehostete Dienst läuft mit demselben Code, den du herunterladen kannst.</p>
+            </details>
+            <details>
+                <summary>Kann ich mit meinem Wiki später vom gehosteten Dienst wegziehen?</summary>
+                <p>Ja. Ein Administrator kann das ganze Wiki exportieren und in eine eigene BananaWiki-Installation importieren. Die Anleitung <a href="https://hosting.bananawiki.com/help/move-to-your-own-server?lang=de">Dein Wiki auf einen eigenen Server umziehen</a> erklärt die Schritte.</p>
+            </details>
+            <details>
+                <summary>Was sehen Besucher, wenn ein gehostetes Wiki angehalten ist?</summary>
+                <p>Sie sehen eine kurze Seite unter der eigenen Adresse des Wikis, die anzeigt, ob es pausiert, gesperrt oder abgelaufen ist oder gerade startet. Besucher werden nicht zum Hosting-Portal weitergeleitet.</p>
+            </details>
+            <details>
+                <summary>Zeigt der gehostete Dienst Werbung oder verkauft er Daten?</summary>
+                <p>Nein. Es gibt keine Werbung, und Nutzerdaten werden nie verkauft.</p>
+            </details>
+            <details>
+                <summary>Wer betreibt den gehosteten Dienst?</summary>
+                <p>Luca Zani betreibt ihn, mit demselben Code, den du herunterladen kannst. Die Registrierung ist nicht immer geöffnet, und wenn sie geschlossen ist, steht das auf dieser Seite.</p>
+            </details>
+            <details>
+                <summary>Brauchen Leser ein Konto?</summary>
+                <p>Ja, standardmäßig, denn Wikis sind privat. Öffentlicher Lesezugang ist optional und wird beim gehosteten Dienst auf Anfrage freigeschaltet.</p>
+            </details>
+            <details>
+                <summary>Hat es KI-Funktionen?</summary>
+                <p>Nein, das Wiki enthält kein Sprachmodell. <a href="bananachat/index.de.html">BananaChat</a> ist ein eigenes Projekt, um Modelle auf deiner eigenen Hardware zu betreiben.</p>
+            </details>
+            <details>
+                <summary>An wen schreibe ich?</summary>
+                <p>Für den gehosteten Dienst schreib an <!--email_off--><a href="mailto:contact@bananawiki.com">contact@bananawiki.com</a><!--/email_off-->. Für die Software eröffne ein Issue auf <a href="https://github.com/BananaSuite/BananaWiki/issues">GitHub</a>. Sicherheitsprobleme meldest du bitte vertraulich, wie in der <a href="https://github.com/BananaSuite/BananaWiki/security/policy">Sicherheitsrichtlinie</a> beschrieben.</p>
+            </details>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div>
+            <a class="footer-logo" href="index.de.html"><img src="img/banana_yellow.png?v=ba9c9053f412" alt="" width="32" height="32">BananaWiki</a>
+            <p>Gepflegt von Luca Zani und Mitwirkenden.</p>
+            <p>Freie Software unter der GNU AGPL Version 3.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Fußzeile">
+            <a href="https://hosting.bananawiki.com/help?lang=de">Hilfe</a>
+            <a href="about/index.de.html">Über uns</a>
+            <a href="terms/index.de.html">Nutzungsbedingungen</a>
+            <a href="privacy/index.de.html">Datenschutz</a>
+            <a href="https://status.bananawiki.com">Dienststatus</a>
+            <a href="https://github.com/BananaSuite/BananaWiki">Quellcode</a>
+            <!--email_off--><a href="mailto:contact@bananawiki.com">Kontakt</a><!--/email_off-->
+        </nav>
+    </div>
+</footer>
+</body>
+</html>
