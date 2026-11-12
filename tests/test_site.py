@@ -153,8 +153,8 @@ def _version(rel: str, lang: str) -> str:
 HOMES = {lang: (_version("index.html", lang), _version("unavailable.html", lang)) for lang in LANGS}
 
 
-def test_the_site_has_six_pages_in_three_languages():
-    assert len(PAGES) == 18, sorted(PAGES)
+def test_the_site_has_eight_pages_in_three_languages():
+    assert len(PAGES) == 24, sorted(PAGES)
     assert {_version(rel, lang) for rel in PAGES for lang in LANGS} == set(PAGES)
 
 
@@ -245,6 +245,8 @@ def test_hero_captions_sit_on_the_yellow_band():
         "an outside focus ring would vanish against the band"
     heroes = {rel: "img/wiki-home.png" for lang in LANGS for rel in HOMES[lang]}
     heroes.update({_version("bananachat/index.html", lang): "img/bananachat.png" for lang in LANGS})
+    heroes.update({_version(f"{name}/index.html", lang): f"img/{name}.png" for lang in LANGS
+                   for name in ("bananagit", "bananavibe")})
     for rel, image in heroes.items():
         html = PAGES[rel].read_text(encoding="utf-8")
         band = html.split('<div class="band">', 1)[1].split("</dl>", 1)[0]
@@ -468,8 +470,12 @@ def _mascot(rel: str) -> tuple[dict[str, str], str, str, str]:
     return dict(re.findall(r'([\w-]+)(?:="([^"]*)")?', match.group(1))), *match.group(2, 3, 4)
 
 
+# The sister projects' pages, by directory: each has its own name beside the mascot and its own home page.
+SISTERS = {"bananachat": "BananaChat", "bananagit": "BananaGit", "bananavibe": "BananaVibe"}
+
+
 def _product(rel: str) -> str:
-    return "BananaChat" if rel.startswith("bananachat/") else "BananaWiki"
+    return SISTERS.get(rel.split("/")[0], "BananaWiki")
 
 
 def test_every_page_shows_the_mascot_beside_the_site_name(pages):
@@ -478,7 +484,7 @@ def test_every_page_shows_the_mascot_beside_the_site_name(pages):
     sprites = set()
     for rel, page in pages.items():
         attrs, sprite, href, name = _mascot(rel)
-        home = "bananachat/index.html" if rel.startswith("bananachat/") else "index.html"
+        home = f"{rel.split('/')[0]}/index.html" if rel.split("/")[0] in SISTERS else "index.html"
         assert name == _product(rel) and _target(rel, href)[0] == _version(home, page.lang), rel
         assert {"data-mascot", "disabled"} <= attrs.keys() and attrs["data-mascot-clicks"] == "11", rel
         html = PAGES[rel].read_text(encoding="utf-8")
@@ -624,7 +630,9 @@ def test_the_screenshots_show_the_apps_with_their_banana():
     anchor = min(art, key=lambda xy: (xy[1], xy[0]))  # the outline's top left pixel
     stale = []
     for path in sorted((ROOT / "img").glob("*.png")):
-        if f"img/{path.name}" in ICONS:
+        # BananaGit draws its banana from its own SVG logo at Gitea's size, so its pixels differ, and
+        # BananaVibe's picture is a terminal
+        if f"img/{path.name}" in ICONS or path.name.startswith(("bananagit", "bananavibe")):
             continue
         bar = image.open(path).convert("RGB").crop((0, 0, 320, 64))
         shot = bar.load()

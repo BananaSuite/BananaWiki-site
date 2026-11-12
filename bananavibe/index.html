@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>BananaVibe: keep coding agents working until the job is done</title>
+<meta name="description" content="BananaVibe supervises Claude Code, Codex and OpenCode on a long goal: fresh sessions, your checks, an independent reviewer, and waiting out usage limits and outages.">
+<link rel="stylesheet" href="../style.css?v=39dba552f508">
+<link rel="stylesheet" href="../mascot/mascot.css?v=d0df485fcacd">
+<script src="../mascot/mascot.js?v=a9cfc980d2fd" defer></script>
+<link rel="icon" type="image/png" href="../img/banana_yellow.png?v=ba9c9053f412">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png?v=4541d0cbd66c">
+<link rel="alternate" hreflang="it" href="index.it.html">
+<link rel="alternate" hreflang="de" href="index.de.html">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header">
+    <div class="container">
+        <div class="brand">
+            <button type="button" class="mascot" data-mascot data-mascot-clicks="11" aria-label="BananaVibe mascot" title="BananaVibe mascot" data-label-shades="BananaVibe mascot, with sunglasses" data-on="Deal with it." data-off="Sunglasses off." disabled><span class="mascot__body"><svg class="mascot-sprite" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true" focusable="false"><rect x="9" y="0" width="3" height="1" fill="#1a1408"/><rect x="9" y="1" width="1" height="1" fill="#1a1408"/><rect x="10" y="1" width="1" height="1" fill="#6e461e"/><rect x="11" y="1" width="1" height="1" fill="#1a1408"/><rect x="5" y="2" width="6" height="1" fill="#1a1408"/><rect x="4" y="3" width="1" height="1" fill="#1a1408"/><rect x="5" y="3" width="1" height="1" fill="#e2ba28"/><rect x="6" y="3" width="3" height="1" fill="#ffde4a"/><rect x="9" y="3" width="1" height="1" fill="#1a1408"/><rect x="3" y="4" width="1" height="1" fill="#1a1408"/><rect x="4" y="4" width="1" height="1" fill="#e2ba28"/><rect x="5" y="4" width="4" height="1" fill="#ffde4a"/><rect x="9" y="4" width="1" height="1" fill="#1a1408"/><rect x="3" y="5" width="1" height="1" fill="#1a1408"/><rect x="4" y="5" width="1" height="1" fill="#e2ba28"/><rect x="5" y="5" width="4" height="1" fill="#ffde4a"/><rect x="9" y="5" width="1" height="1" fill="#1a1408"/><rect x="2" y="6" width="1" height="1" fill="#1a1408"/><rect x="3" y="6" width="2" height="1" fill="#e2ba28"/><rect x="5" y="6" width="5" height="1" fill="#ffde4a"/><rect x="10" y="6" width="1" height="1" fill="#1a1408"/><rect x="2" y="7" width="1" height="1" fill="#1a1408"/><rect x="3" y="7" width="2" height="1" fill="#e2ba28"/><rect x="5" y="7" width="5" height="1" fill="#ffde4a"/><rect x="10" y="7" width="1" height="1" fill="#1a1408"/><rect x="2" y="8" width="1" height="1" fill="#1a1408"/><rect x="3" y="8" width="2" height="1" fill="#e2ba28"/><rect x="5" y="8" width="6" height="1" fill="#ffde4a"/><rect x="11" y="8" width="2" height="1" fill="#1a1408"/><rect x="2" y="9" width="1" height="1" fill="#1a1408"/><rect x="3" y="9" width="2" height="1" fill="#e2ba28"/><rect x="5" y="9" width="8" height="1" fill="#ffde4a"/><rect x="13" y="9" width="2" height="1" fill="#1a1408"/><rect x="2" y="10" width="1" height="1" fill="#1a1408"/><rect x="3" y="10" width="3" height="1" fill="#e2ba28"/><rect x="6" y="10" width="9" height="1" fill="#ffde4a"/><rect x="15" y="10" width="1" height="1" fill="#1a1408"/><rect x="3" y="11" width="1" height="1" fill="#1a1408"/><rect x="4" y="11" width="3" height="1" fill="#e2ba28"/><rect x="7" y="11" width="7" height="1" fill="#ffde4a"/><rect x="14" y="11" width="1" height="1" fill="#e2ba28"/><rect x="15" y="11" width="1" height="1" fill="#1a1408"/><rect x="3" y="12" width="1" height="1" fill="#1a1408"/><rect x="4" y="12" width="6" height="1" fill="#e2ba28"/><rect x="10" y="12" width="3" height="1" fill="#ffde4a"/><rect x="13" y="12" width="1" height="1" fill="#e2ba28"/><rect x="14" y="12" width="1" height="1" fill="#1a1408"/><rect x="4" y="13" width="2" height="1" fill="#1a1408"/><rect x="6" y="13" width="7" height="1" fill="#e2ba28"/><rect x="13" y="13" width="1" height="1" fill="#1a1408"/><rect x="6" y="14" width="7" height="1" fill="#1a1408"/><g class="mascot__eyes"><rect x="5" y="6" width="1" height="1" fill="#1a1408"/><rect x="8" y="6" width="1" height="1" fill="#1a1408"/><rect x="5" y="7" width="1" height="1" fill="#1a1408"/><rect x="8" y="7" width="1" height="1" fill="#1a1408"/></g><rect x="5" y="10" width="1" height="1" fill="#1a1408"/><rect x="8" y="10" width="1" height="1" fill="#1a1408"/><rect x="6" y="11" width="2" height="1" fill="#1a1408"/><g class="mascot__shades"><rect x="2" y="6" width="2" height="1" fill="#1a1408"/><rect x="4" y="6" width="1" height="1" fill="#ffffff"/><rect x="5" y="6" width="6" height="1" fill="#1a1408"/><rect x="4" y="7" width="2" height="1" fill="#1a1408"/><rect x="7" y="7" width="2" height="1" fill="#1a1408"/></g></svg></span></button>
+            <a class="brand-name" href="./">BananaVibe</a>
+        </div>
+        <nav class="nav" aria-label="Main">
+            <a href="#features">Features</a>
+            <a href="#install">Install</a>
+            <a href="../">BananaWiki</a>
+            <a href="../bananachat/">BananaChat</a>
+            <a href="../bananagit/">BananaGit</a>
+            <a class="nav-language" href="index.it.html" lang="it" hreflang="it">Italiano</a>
+            <a class="nav-language" href="index.de.html" lang="de" hreflang="de">Deutsch</a>
+            <a class="nav-button" href="https://github.com/BananaSuite/BananaVibe">Source on GitHub</a>
+        </nav>
+    </div>
+</header>
+
+<main id="content">
+<section class="hero">
+    <div class="container">
+        <p class="eyebrow"><img src="../img/banana_yellow.png?v=ba9c9053f412" alt="" width="32" height="32">A sister project of BananaWiki</p>
+        <h1>Keep coding agents working until the job is really done</h1>
+        <p class="hero-lead">Claude Code, Codex and OpenCode finish one task and hand control back. BananaVibe is a small command-line supervisor that restarts them on your goal for hours, days or weeks, runs your checks, and has an independent reviewer audit the work before it counts as done.</p>
+        <div class="hero-actions">
+            <a class="button" href="#install">Install BananaVibe</a>
+            <a class="button button-secondary" href="#run">See a real run</a>
+        </div>
+        <p class="hero-note">BananaVibe is free software under the GNU AGPL version 3. It has no model of its own: it runs the agents you’re already logged in to.</p>
+    </div>
+</section>
+
+<div class="band">
+    <div class="container">
+        <figure class="hero-figure">
+            <a class="hero-figure-link" href="../img/bananavibe.png?v=6f34705f37db" aria-label="Open the BananaVibe dashboard screenshot at full size"><img src="../img/bananavibe.png?v=6f34705f37db" alt="BananaVibe’s dashboard in a terminal: the run’s status, a plan six-sevenths done, passing checks, the sessions of a worker and a reviewer, and the live transcript of the third work session" width="1280" height="800" fetchpriority="high"></a>
+            <figcaption>The live dashboard during a sample run. The worker and reviewer here are scripted stand-ins, with no model involved.</figcaption>
+        </figure>
+        <dl class="facts">
+            <div><dt>Licence</dt><dd>GNU AGPL version 3</dd></div>
+            <div><dt>Agents</dt><dd>Claude Code, Codex, OpenCode or any command-line agent</dd></div>
+            <div><dt>Needs</dt><dd>Linux or macOS, Python 3.11 or newer and Git</dd></div>
+            <div><dt>Interface</dt><dd>Command line, in English</dd></div>
+        </dl>
+    </div>
+</div>
+
+<section class="section" id="features" aria-labelledby="features-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="features-title">Features</h2>
+            <p>It works with any project and any goal, such as new features, production readiness, refactoring, test coverage, migrations or documentation. One workspace can hold several repositories.</p>
+        </header>
+        <div class="feature-groups">
+            <section class="feature-group">
+                <h3>Long runs</h3>
+                <ul>
+                    <li>Every session starts with a fresh context</li>
+                    <li>Memory lives in files: the mission, a master plan, notes, a journal of handoffs and the Git history</li>
+                    <li>Each session’s work is committed on a separate branch of each repository</li>
+                    <li>Only you, or a budget you set, end a run</li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>Verification</h3>
+                <ul>
+                    <li>A claim of done is rejected while plan items are open or your checks fail</li>
+                    <li>An independent reviewer, ideally a different model, audits the work against the mission</li>
+                    <li>Findings go back to the workers</li>
+                    <li>The run ends after enough approvals in a row, two by default</li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>Limits and failures</h3>
+                <ul>
+                    <li>Usage limits wait for the reset time, read from the agent’s own messages</li>
+                    <li>Outages and crashes back off and retry, and work done before a failure is committed</li>
+                    <li>With several agents, it fails over to one that’s available</li>
+                    <li>A guardian process restarts the supervisor after a crash, a kill or a reboot</li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>Watching and steering</h3>
+                <ul>
+                    <li>A live full-screen dashboard with keys to pause, resume, message and ask</li>
+                    <li>A chat that answers questions about the run and takes instructions</li>
+                    <li>Messages that reach the running agent between its tasks, or at once</li>
+                    <li>Optional notifications to a command or a webhook</li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>Pausing and moving</h3>
+                <ul>
+                    <li>Pause or stop now and continue later, with the interrupted session remembered</li>
+                    <li>Change the mission or the settings while it runs</li>
+                    <li>Export a run and import it on another machine, with a checksum verified on import</li>
+                    <li>Open any past session in the agent’s own interface</li>
+                </ul>
+            </section>
+            <section class="feature-group">
+                <h3>Running it</h3>
+                <ul>
+                    <li>Python’s standard library only, with nothing else to install</li>
+                    <li><code>bananavibe doctor --live</code> checks that every agent answers before a long run</li>
+                    <li>Starts at boot and whenever the run is down, through systemd or cron</li>
+                    <li>Old logs are compressed and pruned, and a full disk makes it wait, not fail</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="run" aria-labelledby="run-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="run-title">A real run</h2>
+            <p>From a test run with Claude Code working and Codex reviewing. The first limit was simulated and the later one was real.</p>
+        </header>
+<pre class="code" tabindex="0"><code>17:05:55 ▶ work session 1 with claude
+17:05:55 ! claude: usage/rate limit: You've hit your limit · resets soon
+17:05:55 all agents (claude) are cooling down: waiting until Wed 17:07 (1m 44s)
+17:07:40 ▶ work session 1 with claude
+17:10:14 ■ claude finished after 2m 34s
+17:13:36 check tests: PASS · check acceptance: PASS
+17:13:36 claude claims the mission is complete: verifying
+17:18:50 ! codex requested changes
+17:20:52 claude claims the mission is complete: verifying
+17:25:06 ! codex requested changes
+   …
+17:32:46 ! codex: usage/rate limit: … try again at Nov 4th, 2026 8:39 PM
+17:32:46 ▶ review-final session 6 with claude
+17:34:18 claude approved the work (1/2)
+   …
+17:44:48 ✅ mission complete: approved 2 time(s).</code></pre>
+        <p class="section-text">All checks passed after the second session. The reviewer still sent the work back three times with real bugs before approving it, and when the reviewer hit its own limit, another agent took over the review.</p>
+    </div>
+</section>
+
+<section class="section" id="install" aria-labelledby="install-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="install-title">Install</h2>
+            <p>You need at least one agent’s command-line tool, installed and logged in.</p>
+        </header>
+        <div class="columns">
+            <div>
+                <h3>Install it</h3>
+<pre class="code" tabindex="0"><code>pipx install git+https://github.com/BananaSuite/BananaVibe
+
+<span class="comment"># or from a checkout, without installing anything</span>
+git clone https://github.com/BananaSuite/BananaVibe
+cd BananaVibe
+./scripts/install.sh</code></pre>
+                <p class="note">The script puts a <code>bananavibe</code> launcher in <code>~/.local/bin</code> that runs the checkout directly.</p>
+            </div>
+            <div>
+                <h3>Start a run</h3>
+<pre class="code" tabindex="0"><code><span class="comment"># in a repository, or a folder of repositories</span>
+bananavibe init --workers claude,codex --reviewer codex \
+  --check "tests=pytest -q" --goal "Make this project production ready"
+bananavibe doctor --live
+bananavibe start
+
+<span class="comment"># later</span>
+bananavibe dashboard</code></pre>
+                <p class="note">Describe the mission and what done means in <code>.bananavibe/GOAL.md</code> before you start. The <a href="https://github.com/BananaSuite/BananaVibe/blob/main/docs/writing-goals.md">guide to writing goals</a> and the <a href="https://github.com/BananaSuite/BananaVibe/blob/main/docs/configuration.md">configuration reference</a> cover the rest.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="safety" aria-labelledby="safety-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="safety-title">Before you run it</h2>
+        </header>
+        <div class="faq-list">
+            <details>
+                <summary>Where should it run?</summary>
+                <p>BananaVibe runs agents with every permission prompt turned off, because nobody is there to approve them. Run it on a dedicated server, a container or a throwaway virtual machine, never on your main account, and give it only the credentials it needs. The <a href="https://github.com/BananaSuite/BananaVibe/blob/main/docs/server.md">server guide</a> describes a hardened setup.</p>
+            </details>
+            <details>
+                <summary>Can agents push or deploy?</summary>
+                <p>Agents are told not to push or deploy unless you allow it in the configuration. BananaVibe’s protections guard against mistakes, not against a deliberately hostile agent, so the isolation comes from the machine you give it.</p>
+            </details>
+            <details>
+                <summary>Is BananaVibe an agent?</summary>
+                <p>No. It makes no model API calls. It runs the agents’ own command-line tools with their own logins, and every session is an ordinary conversation of that agent.</p>
+            </details>
+            <details>
+                <summary>Which subscriptions can I use?</summary>
+                <p>Whatever login each tool has: a Claude subscription in Claude Code, a ChatGPT plan in Codex, or API keys. Each provider’s terms and usage policies apply. Use a Claude subscription only through Claude Code itself.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="story" aria-labelledby="story-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="story-title">How it relates to BananaWiki</h2>
+        </header>
+        <div class="story">
+            <p>BananaVibe started in August 2026 as BananaAgent, to keep work on BananaWiki and BananaChat moving. It became a command-line tool with version 1.0 in October 2026.</p>
+            <p>It’s a separate program that works with any repository. Luca Zani created it and maintains it with contributors. The <a href="../about/">About</a> page tells the full story.</p>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div>
+            <a class="footer-logo" href="../"><img src="../img/banana_yellow.png?v=ba9c9053f412" alt="" width="32" height="32">BananaWiki</a>
+            <p>Maintained by Luca Zani and contributors.</p>
+            <p>Free software under the GNU AGPL version 3.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+            <a href="https://hosting.bananawiki.com/help" data-only="available">Help</a>
+            <a href="../about/">About</a>
+            <a href="../terms/">Terms</a>
+            <a href="../privacy/">Privacy</a>
+            <a href="https://status.bananawiki.com">Service status</a>
+            <a href="https://github.com/BananaSuite/BananaVibe">BananaVibe source</a>
+            <!--email_off--><a href="mailto:contact@bananawiki.com">Contact</a><!--/email_off-->
+        </nav>
+    </div>
+</footer>
+</body>
+</html>

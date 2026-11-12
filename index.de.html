@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <title>BananaWiki: ein privates Wiki für Teams, Klassen und kleine Organisationen</title>
 <meta name="description" content="Schreib Seiten in Markdown, behalte jede Version und lege fest, wer welchen Teil lesen oder ändern darf. Nutze den gehosteten Dienst oder betreibe dieselbe freie Software auf deinem eigenen Server.">
-<link rel="stylesheet" href="style.css?v=10e3c4edc171">
+<link rel="stylesheet" href="style.css?v=39dba552f508">
 <link rel="stylesheet" href="mascot/mascot.css?v=d0df485fcacd">
 <script src="mascot/mascot.js?v=a9cfc980d2fd" defer></script>
 <link rel="icon" type="image/png" href="img/banana_yellow.png?v=ba9c9053f412">
@@ -29,6 +29,8 @@
             <a href="#screenshots">Screenshots</a>
             <a href="#hosting">Hosting</a>
             <a href="bananachat/index.de.html">BananaChat</a>
+            <a href="bananagit/index.de.html">BananaGit</a>
+            <a href="bananavibe/index.de.html">BananaVibe</a>
             <a class="nav-language" href="index.html" lang="en" hreflang="en">English</a>
             <a class="nav-language" href="index.it.html" lang="it" hreflang="it">Italiano</a>
             <a class="nav-button" href="https://hosting.bananawiki.com/login">Anmelden</a>
@@ -51,7 +53,7 @@
 <div class="band">
     <div class="container">
         <figure class="hero-figure">
-            <a class="hero-figure-link" href="img/wiki-home.png?v=4f28610a80b4" aria-label="Den Screenshot der Startseite eines Wikis in voller Größe öffnen"><img src="img/wiki-home.png?v=4f28610a80b4" alt="Die Startseite eines Team-Wikis mit Links zu Handbuchseiten und einer Tabelle mit Arbeitsbereichen, Verantwortlichen und Status; die Kategorien stehen in der Seitenleiste" width="1280" height="800" fetchpriority="high"></a>
+            <a class="hero-figure-link" href="img/wiki-home.png?v=a353887f1811" aria-label="Den Screenshot der Startseite eines Wikis in voller Größe öffnen"><img src="img/wiki-home.png?v=a353887f1811" alt="Die Startseite eines Team-Wikis mit Links zu Handbuchseiten und einer Tabelle mit Arbeitsbereichen, Verantwortlichen und Status; die Kategorien stehen in der Seitenleiste" width="1280" height="800" fetchpriority="high"></a>
             <figcaption>Eine Wiki-Seite, mit Seiten und Kategorien in der Seitenleiste und der Gliederung der Seite daneben. Die Oberfläche ist auf Englisch zu sehen.</figcaption>
         </figure>
         <dl class="facts">
@@ -151,27 +153,27 @@
         </header>
         <div class="gallery">
             <figure>
-                <a class="screenshot-link" href="img/editor.png?v=2b7ecac62446" aria-label="Den Screenshot des Editors in voller Größe öffnen"><img src="img/editor.png?v=2b7ecac62446" alt="Der Seiteneditor: Markdown links und die Vorschau rechts, darüber die Werkzeuge zum Formatieren" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="img/editor.png?v=4e3507e3448a" aria-label="Den Screenshot des Editors in voller Größe öffnen"><img src="img/editor.png?v=4e3507e3448a" alt="Der Seiteneditor: Markdown links und die Vorschau rechts, darüber die Werkzeuge zum Formatieren" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>Der Editor, mit Markdown links und der Vorschau rechts.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="img/editor-images.png?v=5c1d27086790" aria-label="Den Screenshot der Bildoptionen in voller Größe öffnen"><img src="img/editor-images.png?v=5c1d27086790" alt="Der Dialog mit den Bildoptionen über dem Seiteneditor: ein Zuschneiderahmen auf dem Bild, dann Alternativtext, Breite, Ausrichtung und Abstand" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="img/editor-images.png?v=6bb502a12443" aria-label="Den Screenshot der Bildoptionen in voller Größe öffnen"><img src="img/editor-images.png?v=6bb502a12443" alt="Der Dialog mit den Bildoptionen über dem Seiteneditor: ein Zuschneiderahmen auf dem Bild, dann Alternativtext, Breite, Ausrichtung und Abstand" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>Mit den Bildoptionen fügst du einen Alternativtext hinzu, legst Größe und Ausrichtung fest oder schneidest das Bild zu. Die Originaldatei bleibt unverändert.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="img/wiki-customize.png?v=00cdd0a50cf1" aria-label="Den Screenshot der Darstellung in voller Größe öffnen"><img src="img/wiki-customize.png?v=00cdd0a50cf1" alt="Die Einstellungen der Darstellung: Design, Textgröße, Kontrast und Abstände" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="img/wiki-customize.png?v=cdbce5452151" aria-label="Den Screenshot der Darstellung in voller Größe öffnen"><img src="img/wiki-customize.png?v=cdbce5452151" alt="Die Einstellungen der Darstellung: Design, Textgröße, Kontrast und Abstände" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>Die Darstellungseinstellungen, in denen jede Person Design, Textgröße, Kontrast und Abstände wählt.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="img/kanban.png?v=44b83df591cc" aria-label="Den Screenshot des Kanban-Boards in voller Größe öffnen"><img src="img/kanban.png?v=44b83df591cc" alt="Ein Kanban-Board mit Karten in den Spalten To do, In progress und Done" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="img/kanban.png?v=6478df18cb2c" aria-label="Den Screenshot des Kanban-Boards in voller Größe öffnen"><img src="img/kanban.png?v=6478df18cb2c" alt="Ein Kanban-Board mit Karten in den Spalten To do, In progress und Done" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>Ein Kanban-Board, auf dem jede Karte ihre Kommentare, ihre Checkliste und ihren Verlauf behält.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="img/canvas.png?v=508da8d466ff" aria-label="Den Screenshot des Canvas in voller Größe öffnen"><img src="img/canvas.png?v=508da8d466ff" alt="Ein Canvas mit Notizen, die durch beschriftete Pfeile verbunden sind" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="img/canvas.png?v=43c80e78fcca" aria-label="Den Screenshot des Canvas in voller Größe öffnen"><img src="img/canvas.png?v=43c80e78fcca" alt="Ein Canvas mit Notizen, die durch beschriftete Pfeile verbunden sind" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>Ein Canvas mit Notizen und Verbindungen. Canvases haben einen Verlauf, genau wie Seiten.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="img/plugins.png?v=e3441299f6b0" aria-label="Den Screenshot der Funktionen in voller Größe öffnen"><img src="img/plugins.png?v=e3441299f6b0" alt="Die Seite der Funktionen in der Verwaltung: die eingebauten Werkzeuge mit Status und Aktionen" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="img/plugins.png?v=5c9f531576c5" aria-label="Den Screenshot der Funktionen in voller Größe öffnen"><img src="img/plugins.png?v=5c9f531576c5" alt="Die Seite der Funktionen in der Verwaltung: die eingebauten Werkzeuge mit Status und Aktionen" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>Die Funktionsseite, auf der du Werkzeuge ein- oder ausschaltest. Wenn du ein Werkzeug ausschaltest, bleiben seine Daten erhalten.</figcaption>
             </figure>
         </div>
@@ -191,7 +193,7 @@
                 </div>
             </header>
             <figure class="hosting-figure">
-                <a class="screenshot-link" href="img/hosting-dashboard.png?v=2a716a79d5d5" aria-label="Den Screenshot des Hosting-Dashboards in voller Größe öffnen"><img src="img/hosting-dashboard.png?v=2a716a79d5d5" alt="Das Hosting-Dashboard: eine Liste von Wikis mit Adresse, Status, Restlaufzeit und Speicher" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="img/hosting-dashboard.png?v=9f1224923514" aria-label="Den Screenshot des Hosting-Dashboards in voller Größe öffnen"><img src="img/hosting-dashboard.png?v=9f1224923514" alt="Das Hosting-Dashboard: eine Liste von Wikis mit Adresse, Status, Restlaufzeit und Speicher" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>Das Hosting-Dashboard, das jedes Wiki mit Adresse, Status, Restlaufzeit und Speicher zeigt.</figcaption>
             </figure>
         </div>
@@ -270,7 +272,7 @@ bananawiki setup-token</code></pre>
         </header>
         <div class="story">
             <p>Luca Zani startete BananaWiki am 20. Februar 2026 für ein Team, das ein Wiki für seine Arbeit brauchte. Im Juni nahm die Entwicklung Fahrt auf, und BananaWiki wurde zu dem Wiki mit Hosting-Plattform, das es heute ist. Seit September 2026 ist es freie Software, gepflegt von Luca Zani und Mitwirkenden.</p>
-            <p>Daneben sind zwei kleinere Projekte entstanden. <a href="https://github.com/BananaSuite/BananaChat">BananaChat</a> begann als BananaAI und gibt einer Gruppe einen gemeinsamen Chat mit lokalen und gehosteten Sprachmodellen. <a href="https://github.com/BananaSuite/BananaVibe">BananaVibe</a> lässt Coding-Agents an einer langen Aufgabe arbeiten, bis sie erledigt und geprüft ist. Die Seite <a href="about/index.de.html">Über uns</a> erzählt die ganze Geschichte.</p>
+            <p>Daneben sind drei kleinere Projekte entstanden. <a href="https://github.com/BananaSuite/BananaChat">BananaChat</a> begann als BananaAI und gibt einer Gruppe einen gemeinsamen Chat mit lokalen und gehosteten Sprachmodellen. <a href="https://github.com/BananaSuite/BananaVibe">BananaVibe</a> lässt Coding-Agents an einer langen Aufgabe arbeiten, bis sie erledigt und geprüft ist. <a href="https://github.com/BananaSuite/BananaGit">BananaGit</a> ist unser Fork von Gitea, mit demselben Aussehen und einem eigenen Updater. Die Seite <a href="about/index.de.html">Über uns</a> erzählt die ganze Geschichte.</p>
         </div>
     </div>
 </section>

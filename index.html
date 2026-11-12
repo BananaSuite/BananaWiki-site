@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <title>BananaWiki: a private wiki for teams, classes and small organisations</title>
 <meta name="description" content="Write pages in Markdown, keep every revision and decide who can read or change each part. Use the hosted service or run the same free software on your own server.">
-<link rel="stylesheet" href="style.css?v=10e3c4edc171">
+<link rel="stylesheet" href="style.css?v=39dba552f508">
 <link rel="stylesheet" href="mascot/mascot.css?v=d0df485fcacd">
 <script src="mascot/mascot.js?v=a9cfc980d2fd" defer></script>
 <link rel="icon" type="image/png" href="img/banana_yellow.png?v=ba9c9053f412">
@@ -29,6 +29,8 @@
             <a href="#screenshots">Screenshots</a>
             <a href="#hosting">Hosting</a>
             <a href="bananachat/">BananaChat</a>
+            <a href="bananagit/">BananaGit</a>
+            <a href="bananavibe/">BananaVibe</a>
             <a class="nav-language" href="index.it.html" lang="it" hreflang="it">Italiano</a>
             <a class="nav-language" href="index.de.html" lang="de" hreflang="de">Deutsch</a>
             <a class="nav-button" href="https://hosting.bananawiki.com/login">Log in</a>
@@ -51,7 +53,7 @@
 <div class="band">
     <div class="container">
         <figure class="hero-figure">
-            <a class="hero-figure-link" href="img/wiki-home.png?v=4f28610a80b4" aria-label="Open the wiki home page screenshot at full size"><img src="img/wiki-home.png?v=4f28610a80b4" alt="A team wiki’s home page with links to handbook pages and a table of workstreams, owners and statuses; the category tree is in the sidebar" width="1280" height="800" fetchpriority="high"></a>
+            <a class="hero-figure-link" href="img/wiki-home.png?v=a353887f1811" aria-label="Open the wiki home page screenshot at full size"><img src="img/wiki-home.png?v=a353887f1811" alt="A team wiki’s home page with links to handbook pages and a table of workstreams, owners and statuses; the category tree is in the sidebar" width="1280" height="800" fetchpriority="high"></a>
             <figcaption>A wiki page, with pages and categories in the sidebar and the page’s outline next to it.</figcaption>
         </figure>
         <dl class="facts">
@@ -151,27 +153,27 @@
         </header>
         <div class="gallery">
             <figure>
-                <a class="screenshot-link" href="img/editor.png?v=2b7ecac62446" aria-label="Open the editor screenshot at full size"><img src="img/editor.png?v=2b7ecac62446" alt="The page editor: Markdown on the left and the rendered preview on the right, with formatting tools above" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="img/editor.png?v=4e3507e3448a" aria-label="Open the editor screenshot at full size"><img src="img/editor.png?v=4e3507e3448a" alt="The page editor: Markdown on the left and the rendered preview on the right, with formatting tools above" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>The editor, with Markdown on the left and the preview on the right.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="img/editor-images.png?v=5c1d27086790" aria-label="Open the image options screenshot at full size"><img src="img/editor-images.png?v=5c1d27086790" alt="The image options dialog over the page editor: a crop frame on the picture, then alternative text, width, alignment and spacing" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="img/editor-images.png?v=6bb502a12443" aria-label="Open the image options screenshot at full size"><img src="img/editor-images.png?v=6bb502a12443" alt="The image options dialog over the page editor: a crop frame on the picture, then alternative text, width, alignment and spacing" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>Image options let you add alternative text, set the size and alignment, or crop the image. The original file isn’t changed.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="img/wiki-customize.png?v=00cdd0a50cf1" aria-label="Open the Appearance screenshot at full size"><img src="img/wiki-customize.png?v=00cdd0a50cf1" alt="Appearance settings: theme, text size, contrast and spacing" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="img/wiki-customize.png?v=cdbce5452151" aria-label="Open the Appearance screenshot at full size"><img src="img/wiki-customize.png?v=cdbce5452151" alt="Appearance settings: theme, text size, contrast and spacing" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>Appearance settings, where each person chooses the theme, text size, contrast and spacing.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="img/kanban.png?v=44b83df591cc" aria-label="Open the Kanban board screenshot at full size"><img src="img/kanban.png?v=44b83df591cc" alt="A Kanban board with cards in To do, In progress and Done columns" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="img/kanban.png?v=6478df18cb2c" aria-label="Open the Kanban board screenshot at full size"><img src="img/kanban.png?v=6478df18cb2c" alt="A Kanban board with cards in To do, In progress and Done columns" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>A kanban board, where each card keeps its comments, checklist and history.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="img/canvas.png?v=508da8d466ff" aria-label="Open the canvas screenshot at full size"><img src="img/canvas.png?v=508da8d466ff" alt="A canvas with notes joined by labelled arrows" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="img/canvas.png?v=43c80e78fcca" aria-label="Open the canvas screenshot at full size"><img src="img/canvas.png?v=43c80e78fcca" alt="A canvas with notes joined by labelled arrows" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>A canvas with notes and connections. Canvases have a history, just like pages.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="img/plugins.png?v=e3441299f6b0" aria-label="Open the features screenshot at full size"><img src="img/plugins.png?v=e3441299f6b0" alt="The features page in the administration: built-in tools with their status and actions" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="img/plugins.png?v=5c9f531576c5" aria-label="Open the features screenshot at full size"><img src="img/plugins.png?v=5c9f531576c5" alt="The features page in the administration: built-in tools with their status and actions" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>The features page, where you turn tools on or off. Turning a tool off keeps its data.</figcaption>
             </figure>
         </div>
@@ -191,7 +193,7 @@
                 </div>
             </header>
             <figure class="hosting-figure">
-                <a class="screenshot-link" href="img/hosting-dashboard.png?v=2a716a79d5d5" aria-label="Open the hosting dashboard screenshot at full size"><img src="img/hosting-dashboard.png?v=2a716a79d5d5" alt="The hosting dashboard: a list of wikis with their address, status, time left and storage" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="img/hosting-dashboard.png?v=9f1224923514" aria-label="Open the hosting dashboard screenshot at full size"><img src="img/hosting-dashboard.png?v=9f1224923514" alt="The hosting dashboard: a list of wikis with their address, status, time left and storage" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>The hosting dashboard, which shows each wiki with its address, status, time left and storage.</figcaption>
             </figure>
         </div>
@@ -270,7 +272,7 @@ bananawiki setup-token</code></pre>
         </header>
         <div class="story">
             <p>Luca Zani started BananaWiki on 20 February 2026 for a team that needed a wiki for its work. Development sped up in June, and BananaWiki grew into the wiki and hosting platform it is today. It has been free software since September 2026, maintained by Luca Zani and contributors.</p>
-            <p>Two smaller projects grew alongside it. <a href="https://github.com/BananaSuite/BananaChat">BananaChat</a> started as BananaAI and gives a group one shared chat with local and hosted language models. <a href="https://github.com/BananaSuite/BananaVibe">BananaVibe</a> keeps coding agents working on a long task until it’s done and reviewed. The <a href="about/">About</a> page tells the full story.</p>
+            <p>Three smaller projects grew alongside it. <a href="https://github.com/BananaSuite/BananaChat">BananaChat</a> started as BananaAI and gives a group one shared chat with local and hosted language models. <a href="https://github.com/BananaSuite/BananaVibe">BananaVibe</a> keeps coding agents working on a long task until it’s done and reviewed. <a href="https://github.com/BananaSuite/BananaGit">BananaGit</a> is our fork of Gitea, with the same look and its own updater. The <a href="about/">About</a> page tells the full story.</p>
         </div>
     </div>
 </section>

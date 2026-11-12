@@ -89,9 +89,19 @@ code {
 /* Header */
 
 .site-header { border-bottom: 1px solid var(--color-border); }
-.site-header .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 2rem; padding-block: .875rem; }
+.site-header .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .375rem 2rem; padding-block: .875rem .375rem; }
 .brand-name { font-size: 1.125rem; font-weight: 650; letter-spacing: -.01em; text-decoration: none; }
-.nav { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.25rem; font-size: .875rem; }
+/* On phones the links are one row that scrolls sideways and fades out at its right edge, so the header stays
+   two rows tall however many links a page has. The row runs to both edges of the screen. */
+.nav {
+    display: flex; align-items: center; gap: .25rem 1.25rem; font-size: .875rem; white-space: nowrap;
+    width: calc(100% + 2 * var(--gutter)); margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter) 2.5rem;
+    overflow-x: auto; scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+}
+.nav::-webkit-scrollbar { display: none; }
+.nav a { flex: none; }
 .nav a { color: var(--color-text-muted); text-decoration: none; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--color-text); }
 .nav .nav-button {
@@ -112,6 +122,8 @@ code {
 .hero { padding-block: 3rem 2.5rem; }
 .hero-lead { max-width: 40rem; color: var(--color-text-muted); font-size: 1.125rem; line-height: 1.6; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+/* On phones the buttons are full width, one under the other */
+.hero-actions .button, .section-actions .button { flex: 1 1 100%; text-align: center; }
 .hero-note { margin: 1.25rem 0 0; color: var(--color-text-muted); font-size: .875rem; }
 .eyebrow { display: flex; align-items: center; gap: .5rem; margin-bottom: 1.25rem; color: var(--color-text-muted); font-size: .9375rem; }
 /* The banana icon at twice its 16x16 pixel art, scaled without smoothing so its pixels stay squares */
@@ -154,7 +166,12 @@ code {
 .feature-group ul { list-style: none; margin: 0; padding: 0; }
 .feature-group li { padding: .5rem 0; border-top: 1px solid var(--color-border); color: var(--color-text-muted); font-size: .9375rem; line-height: 1.5; }
 
-.gallery { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.5rem 2rem; }
+/* On phones the screenshots are one row to swipe through, with the next one showing at the right edge */
+.gallery {
+    display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+    margin-inline: calc(-1 * var(--gutter)); padding: 0 var(--gutter) .75rem; scroll-padding-inline: var(--gutter);
+}
+.gallery figure { flex: 0 0 86%; scroll-snap-align: start; }
 .screenshot-link { display: block; overflow: hidden; border: 1px solid var(--color-border-strong); border-radius: var(--radius); background: var(--color-surface); }
 .screenshot-link:hover { border-color: var(--color-text-muted); }
 /* A 16:10 preview from the top of the capture; the link opens the whole image, tall ones included */
@@ -256,6 +273,10 @@ code {
 
 @media (min-width: 720px) {
     :root { --gutter: 2rem; }
+    .site-header .container { gap: .75rem 2rem; padding-block: .875rem; }
+    .nav { flex-wrap: wrap; width: auto; margin-inline: 0; padding-inline: 0; overflow: visible; white-space: normal; -webkit-mask-image: none; mask-image: none; }
+    .hero-actions .button, .section-actions .button { flex: 0 1 auto; }
+    .gallery { display: grid; gap: 2.5rem 2rem; overflow: visible; margin-inline: 0; padding: 0; }
     .nav a:not(.nav-language) + .nav-language { border-left: 1px solid var(--color-border); padding-left: 1.25rem; }
     .hero { padding-block: 4.5rem 3rem; }
     .facts { grid-template-columns: repeat(4, minmax(0, 1fr)); }

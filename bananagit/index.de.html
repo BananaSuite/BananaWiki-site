@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>BananaGit: ein selbst gehosteter Git-Dienst auf Basis von Gitea</title>
+<meta name="description" content="Betreibe BananaGit selbst für deine Projekte: Repositorys, Code-Review, Issues und CI/CD von Gitea, in den Farben von BananaSuite und mit einem signierten Updater, der bei Fehlern zurückrollt.">
+<link rel="stylesheet" href="../style.css?v=39dba552f508">
+<link rel="stylesheet" href="../mascot/mascot.css?v=d0df485fcacd">
+<script src="../mascot/mascot.js?v=a9cfc980d2fd" defer></script>
+<link rel="icon" type="image/png" href="../img/banana_yellow.png?v=ba9c9053f412">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png?v=4541d0cbd66c">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="it" href="index.it.html">
+</head>
+<body>
+<a class="skip-link" href="#content">Zum Inhalt springen</a>
+<header class="site-header">
+    <div class="container">
+        <div class="brand">
+            <button type="button" class="mascot" data-mascot data-mascot-clicks="11" aria-label="BananaGit-Maskottchen" title="BananaGit-Maskottchen" data-label-shades="BananaGit-Maskottchen mit Sonnenbrille" data-on="Deal with it." data-off="Sonnenbrille abgenommen." disabled><span class="mascot__body"><svg class="mascot-sprite" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true" focusable="false"><rect x="9" y="0" width="3" height="1" fill="#1a1408"/><rect x="9" y="1" width="1" height="1" fill="#1a1408"/><rect x="10" y="1" width="1" height="1" fill="#6e461e"/><rect x="11" y="1" width="1" height="1" fill="#1a1408"/><rect x="5" y="2" width="6" height="1" fill="#1a1408"/><rect x="4" y="3" width="1" height="1" fill="#1a1408"/><rect x="5" y="3" width="1" height="1" fill="#e2ba28"/><rect x="6" y="3" width="3" height="1" fill="#ffde4a"/><rect x="9" y="3" width="1" height="1" fill="#1a1408"/><rect x="3" y="4" width="1" height="1" fill="#1a1408"/><rect x="4" y="4" width="1" height="1" fill="#e2ba28"/><rect x="5" y="4" width="4" height="1" fill="#ffde4a"/><rect x="9" y="4" width="1" height="1" fill="#1a1408"/><rect x="3" y="5" width="1" height="1" fill="#1a1408"/><rect x="4" y="5" width="1" height="1" fill="#e2ba28"/><rect x="5" y="5" width="4" height="1" fill="#ffde4a"/><rect x="9" y="5" width="1" height="1" fill="#1a1408"/><rect x="2" y="6" width="1" height="1" fill="#1a1408"/><rect x="3" y="6" width="2" height="1" fill="#e2ba28"/><rect x="5" y="6" width="5" height="1" fill="#ffde4a"/><rect x="10" y="6" width="1" height="1" fill="#1a1408"/><rect x="2" y="7" width="1" height="1" fill="#1a1408"/><rect x="3" y="7" width="2" height="1" fill="#e2ba28"/><rect x="5" y="7" width="5" height="1" fill="#ffde4a"/><rect x="10" y="7" width="1" height="1" fill="#1a1408"/><rect x="2" y="8" width="1" height="1" fill="#1a1408"/><rect x="3" y="8" width="2" height="1" fill="#e2ba28"/><rect x="5" y="8" width="6" height="1" fill="#ffde4a"/><rect x="11" y="8" width="2" height="1" fill="#1a1408"/><rect x="2" y="9" width="1" height="1" fill="#1a1408"/><rect x="3" y="9" width="2" height="1" fill="#e2ba28"/><rect x="5" y="9" width="8" height="1" fill="#ffde4a"/><rect x="13" y="9" width="2" height="1" fill="#1a1408"/><rect x="2" y="10" width="1" height="1" fill="#1a1408"/><rect x="3" y="10" width="3" height="1" fill="#e2ba28"/><rect x="6" y="10" width="9" height="1" fill="#ffde4a"/><rect x="15" y="10" width="1" height="1" fill="#1a1408"/><rect x="3" y="11" width="1" height="1" fill="#1a1408"/><rect x="4" y="11" width="3" height="1" fill="#e2ba28"/><rect x="7" y="11" width="7" height="1" fill="#ffde4a"/><rect x="14" y="11" width="1" height="1" fill="#e2ba28"/><rect x="15" y="11" width="1" height="1" fill="#1a1408"/><rect x="3" y="12" width="1" height="1" fill="#1a1408"/><rect x="4" y="12" width="6" height="1" fill="#e2ba28"/><rect x="10" y="12" width="3" height="1" fill="#ffde4a"/><rect x="13" y="12" width="1" height="1" fill="#e2ba28"/><rect x="14" y="12" width="1" height="1" fill="#1a1408"/><rect x="4" y="13" width="2" height="1" fill="#1a1408"/><rect x="6" y="13" width="7" height="1" fill="#e2ba28"/><rect x="13" y="13" width="1" height="1" fill="#1a1408"/><rect x="6" y="14" width="7" height="1" fill="#1a1408"/><g class="mascot__eyes"><rect x="5" y="6" width="1" height="1" fill="#1a1408"/><rect x="8" y="6" width="1" height="1" fill="#1a1408"/><rect x="5" y="7" width="1" height="1" fill="#1a1408"/><rect x="8" y="7" width="1" height="1" fill="#1a1408"/></g><rect x="5" y="10" width="1" height="1" fill="#1a1408"/><rect x="8" y="10" width="1" height="1" fill="#1a1408"/><rect x="6" y="11" width="2" height="1" fill="#1a1408"/><g class="mascot__shades"><rect x="2" y="6" width="2" height="1" fill="#1a1408"/><rect x="4" y="6" width="1" height="1" fill="#ffffff"/><rect x="5" y="6" width="6" height="1" fill="#1a1408"/><rect x="4" y="7" width="2" height="1" fill="#1a1408"/><rect x="7" y="7" width="2" height="1" fill="#1a1408"/></g></svg></span></button>
+            <a class="brand-name" href="index.de.html">BananaGit</a>
+        </div>
+        <nav class="nav" aria-label="Hauptnavigation">
+            <a href="#differences">Unterschiede</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#install">Installation</a>
+            <a href="../index.de.html">BananaWiki</a>
+            <a href="../bananachat/index.de.html">BananaChat</a>
+            <a href="../bananavibe/index.de.html">BananaVibe</a>
+            <a class="nav-language" href="index.html" lang="en" hreflang="en">English</a>
+            <a class="nav-language" href="index.it.html" lang="it" hreflang="it">Italiano</a>
+            <a class="nav-button" href="https://github.com/BananaSuite/BananaGit">Quellcode auf GitHub</a>
+        </nav>
+    </div>
+</header>
+
+<main id="content">
+<section class="hero">
+    <div class="container">
+        <p class="eyebrow"><img src="../img/banana_yellow.png?v=ba9c9053f412" alt="" width="32" height="32">Ein Schwesterprojekt von BananaWiki</p>
+        <h1>Gitea für deine Projekte, mit einem Updater, der zurückrollt</h1>
+        <p class="hero-lead">BananaGit ist ein selbst gehosteter Git-Dienst mit Repositorys, Code-Review, Issues, Paketregistry und CI/CD. Es ist ein Fork von Gitea in den Farben von BananaSuite, und sein Updater prüft ein signiertes Release, legt ein Backup an und rollt zurück, wenn die neue Version nicht startet.</p>
+        <div class="hero-actions">
+            <a class="button" href="#install">BananaGit installieren</a>
+            <a class="button button-secondary" href="#differences">Was sich gegenüber Gitea ändert</a>
+        </div>
+        <p class="hero-note">BananaGit behält die MIT-Lizenz von Gitea. Es ist nicht Gitea und wird vom Gitea-Projekt nicht unterstützt oder empfohlen.</p>
+    </div>
+</section>
+
+<div class="band">
+    <div class="container">
+        <figure class="hero-figure">
+            <a class="hero-figure-link" href="../img/bananagit.png?v=6a1157b1c41e" aria-label="Den Screenshot eines BananaGit-Repositorys in voller Größe öffnen"><img src="../img/bananagit.png?v=6a1157b1c41e" alt="Ein Repository in BananaGit: die Dateiliste, das README und die Beschreibung des Repositorys, mit dem Bananen-Logo in der oberen Leiste" width="1280" height="800" fetchpriority="high"></a>
+            <figcaption>Die Dateien und das README eines Repositorys, im dunklen BananaGit-Theme. Die Oberfläche ist auf Englisch zu sehen.</figcaption>
+        </figure>
+        <dl class="facts">
+            <div><dt>Lizenz</dt><dd>MIT, wie Gitea</dd></div>
+            <div><dt>Basiert auf</dt><dd>Gitea 1.27</dd></div>
+            <div><dt>Voraussetzungen</dt><dd>Linux mit systemd, Git und PostgreSQL</dd></div>
+            <div><dt>Updates</dt><dd>Signiert, mit Backup und Rollback</dd></div>
+        </dl>
+    </div>
+</div>
+
+<section class="section" id="differences" aria-labelledby="differences-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="differences-title">Was sich gegenüber Gitea ändert</h2>
+            <p>Alles, was hier nicht steht, auch jede Einstellung, stammt von Gitea. Administratoren können Name, Theme und Logo weiterhin wie in Gitea ändern.</p>
+        </header>
+        <table class="comparison">
+            <thead>
+                <tr><th scope="col">Bereich</th><th scope="col">Gitea</th><th scope="col">BananaGit</th></tr>
+            </thead>
+            <tbody>
+                <tr><th scope="row">Aussehen</th><td data-label="Gitea">Die Themes von Gitea.</td><td data-label="BananaGit">Zusätzlich ein helles, ein dunkles und ein automatisches BananaGit-Theme. Das automatische ist der Standard.</td></tr>
+                <tr><th scope="row">Name und Logo</th><td data-label="Gitea">„Gitea“ und die Teetasse.</td><td data-label="BananaGit">„BananaGit“ und die Banane von BananaSuite. In der Fußzeile steht „Powered by Gitea (BananaGit)“.</td></tr>
+                <tr><th scope="row">Updates</th><td data-label="Gitea">Du ersetzt die Binärdatei selbst.</td><td data-label="BananaGit">Ein Befehl prüft, sichert, installiert, kontrolliert und rollt zurück.</td></tr>
+                <tr><th scope="row">Release-Binärdateien</th><td data-label="Gitea">Viele Plattformen, mit SQLite.</td><td data-label="BananaGit">Linux auf amd64 und arm64, standardmäßig ohne SQLite gebaut.</td></tr>
+                <tr><th scope="row">Forgejo</th><td data-label="Gitea">Kein unterstützter Weg.</td><td data-label="BananaGit">Eine Migration an Ort und Stelle, nur in eine Richtung, die du vorher an einer Kopie proben kannst.</td></tr>
+                <tr><th scope="row">Versionen</th><td data-label="Gitea">vX.Y.Z.</td><td data-label="BananaGit">Die Version von Gitea plus ein Zähler, zum Beispiel v1.27.3.1.</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="section" id="screenshots" aria-labelledby="screenshots-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="screenshots-title">Screenshots</h2>
+            <p>Screenshots des aktuellen Codes mit einem Beispiel-Repository.</p>
+        </header>
+        <div class="gallery">
+            <figure>
+                <a class="screenshot-link" href="../img/bananagit-issues.png?v=7925c748ab0d" aria-label="Den Screenshot der Issues in voller Größe öffnen"><img src="../img/bananagit-issues.png?v=7925c748ab0d" alt="Die Issue-Liste eines Repositorys mit vier offenen Issues" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <figcaption>Die Issues eines Repositorys.</figcaption>
+            </figure>
+            <figure>
+                <a class="screenshot-link" href="../img/bananagit-pull-request.png?v=266428ef01e4" aria-label="Den Screenshot des Pull Requests in voller Größe öffnen"><img src="../img/bananagit-pull-request.png?v=266428ef01e4" alt="Die geänderten Dateien eines Pull Requests: eine Datei mit zwei hinzugefügten und einer entfernten Zeile" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <figcaption>Ein Pull Request mit den Zeilen, die er ändert.</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="install" aria-labelledby="install-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="install-title">Installation</h2>
+            <p>Probiere es zuerst auf deinem eigenen Computer aus. Ein Server braucht Linux auf amd64 oder arm64 mit systemd, Git, eine PostgreSQL-Datenbank und Python 3.9 oder neuer für den Updater.</p>
+        </header>
+        <div class="columns">
+            <div>
+                <h3>Auf deinem Computer</h3>
+<pre class="code" tabindex="0"><code><span class="comment"># Git, Go und Node.js mit pnpm</span>
+git clone https://github.com/BananaSuite/BananaGit.git
+cd BananaGit
+TAGS="sqlite sqlite_unlock_notify" make build
+./gitea web</code></pre>
+                <p class="note">Öffne dann http://localhost:3000, behalte SQLite als Datenbank und registriere dich. Das erste Konto ist der Administrator, und alles bleibt in diesem Ordner.</p>
+            </div>
+            <div>
+                <h3>Auf einem Linux-Server</h3>
+<pre class="code" tabindex="0"><code><span class="comment"># nach den Installationsschritten im README</span>
+sudo bananagit-update check
+sudo bananagit-update update</code></pre>
+                <p class="note">Das <a href="https://github.com/BananaSuite/BananaGit#install">README</a> (auf Englisch) richtet Benutzer, Verzeichnisse, die Release-Binärdatei und den Dienst ein. Die <a href="https://github.com/BananaSuite/BananaGit/blob/main/bananagit/docs/updating.md">Update-Anleitung</a> (auf Englisch) erklärt jede Einstellung und was zu tun ist, wenn ein Update fehlschlägt. Für andere Umgebungen folgst du der <a href="https://docs.gitea.com/category/installation">Installationsanleitung von Gitea</a> (auf Englisch) mit der BananaGit-Binärdatei. Von Gitea aus tauschst du die Binärdatei und behältst Datenbank und Daten, wie die <a href="https://github.com/BananaSuite/BananaGit/blob/main/bananagit/docs/migrating-from-gitea.md">Migrationsanleitung</a> (auf Englisch) erklärt.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="story" aria-labelledby="story-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="story-title">Wie es mit BananaWiki zusammenhängt</h2>
+        </header>
+        <div class="story">
+            <p>Wir haben BananaGit gebaut, um unsere eigenen Git-Projekte zu hosten. Es nutzt dasselbe Bananen-Logo wie BananaWiki und BananaChat und wird getrennt von beiden installiert.</p>
+            <p>Änderungen, die nicht Name, Aussehen oder Updater von BananaGit betreffen, gehören zu <a href="https://github.com/go-gitea/gitea">Gitea</a>. Die Seite <a href="../about/index.de.html">Über uns</a> erzählt die Geschichte der anderen Projekte.</p>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div>
+            <a class="footer-logo" href="../index.de.html"><img src="../img/banana_yellow.png?v=ba9c9053f412" alt="" width="32" height="32">BananaWiki</a>
+            <p>Gepflegt von Luca Zani und Mitwirkenden.</p>
+            <p>Freie Software unter der GNU AGPL Version 3.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Fußzeile">
+            <a href="https://hosting.bananawiki.com/help?lang=de" data-only="available">Hilfe</a>
+            <a href="../about/index.de.html">Über uns</a>
+            <a href="../terms/index.de.html">Nutzungsbedingungen</a>
+            <a href="../privacy/index.de.html">Datenschutz</a>
+            <a href="https://status.bananawiki.com">Dienststatus</a>
+            <a href="https://github.com/BananaSuite/BananaGit">Quellcode von BananaGit</a>
+            <!--email_off--><a href="mailto:contact@bananawiki.com">Kontakt</a><!--/email_off-->
+        </nav>
+    </div>
+</footer>
+</body>
+</html>

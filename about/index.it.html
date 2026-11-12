@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <title>Chi siamo | BananaWiki</title>
 <meta name="description" content="Da dove viene BananaWiki, chi ci lavora e come è gestito il servizio hosting.">
-<link rel="stylesheet" href="../style.css?v=10e3c4edc171">
+<link rel="stylesheet" href="../style.css?v=39dba552f508">
 <link rel="stylesheet" href="../mascot/mascot.css?v=d0df485fcacd">
 <script src="../mascot/mascot.js?v=a9cfc980d2fd" defer></script>
 <link rel="icon" type="image/png" href="../img/banana_yellow.png?v=ba9c9053f412">
@@ -28,6 +28,8 @@
             <a href="../index.it.html#features">Funzioni</a>
             <a href="../index.it.html#self-host">Installala da te</a>
             <a href="../bananachat/index.it.html">BananaChat</a>
+            <a href="../bananagit/index.it.html">BananaGit</a>
+            <a href="../bananavibe/index.it.html">BananaVibe</a>
             <a href="https://hosting.bananawiki.com/help?lang=it" data-only="available">Guida</a>
             <a class="nav-language" href="index.html" lang="en" hreflang="en">English</a>
             <a class="nav-language" href="index.de.html" lang="de" hreflang="de">Deutsch</a>
@@ -57,12 +59,13 @@
         <li><time datetime="2026-08">Agosto 2026</time><p>Sono iniziati i lavori su BananaVibe, chiamato all’inizio BananaAgent, un supervisore che tiene al lavoro gli agenti di programmazione su compiti lunghi.</p></li>
         <li><time datetime="2026-09">Settembre 2026</time><p>BananaWiki, BananaChat e BananaVibe sono stati pubblicati come software libero con licenza GNU AGPL. A fine mese BananaWiki 1.6, una riscrittura, ha sostituito la prima versione pubblica, insieme a un portale di hosting ridisegnato.</p></li>
         <li><time datetime="2026-10">Ottobre 2026</time><p>BananaWiki 1.7 ha aggiunto l’interfaccia in tedesco e, per le nuove installazioni su server, gli aggiornamenti ai tag di rilascio. BananaChat 1.7 ha aggiunto i provider API esterni. BananaVibe 1.0 è uscito come strumento a riga di comando. BananaWiki 1.7.2 ha aggiunto le opzioni delle immagini nell’editor e reso più affidabili i certificati delle nuove wiki ospitate, e BananaChat 1.7.2 ha aggiunto i pool di abbonamenti Claude Code e Codex.</p></li>
-        <li><time datetime="2026-11">Novembre 2026</time><p>BananaWiki 1.8 e BananaChat 1.8 hanno semplificato le pagine delle impostazioni e dell’amministrazione, e il portale di hosting ha un nuovo aspetto.</p></li>
+        <li><time datetime="2026-11">Novembre 2026</time><p>BananaWiki 1.8 e BananaChat 1.8 hanno semplificato le pagine delle impostazioni e dell’amministrazione, e il portale di hosting ha un nuovo aspetto. È stato pubblicato BananaGit, un fork di Gitea per i nostri progetti Git.</p></li>
     </ol>
 
     <h2>Gli altri due progetti</h2>
     <p><a href="https://github.com/BananaSuite/BananaChat">BananaChat</a> è nato come BananaAI, dal desiderio di far girare in proprio i modelli di intelligenza artificiale. È partito dentro la wiki e oggi funziona da solo, come modo per avvicinare le persone all’IA locale.</p>
     <p><a href="https://github.com/BananaSuite/BananaVibe">BananaVibe</a> è uno strumento a riga di comando che tiene al lavoro su un obiettivo gli agenti di programmazione, come Claude Code, Codex o OpenCode. Ogni sessione parte con un contesto nuovo, e il piano e gli appunti restano in file e in git. Quando un agente dice di aver finito, BananaVibe esegue i tuoi controlli e chiede a un agente revisore indipendente di verificare il lavoro. Il lavoro degli agenti viene salvato con un commit su un branch separato di ogni repository.</p>
+    <p><a href="https://github.com/BananaSuite/BananaGit">BananaGit</a> è un fork di Gitea per ospitare i nostri progetti Git. Mantiene le funzioni di Gitea e aggiunge l’aspetto di BananaSuite e un aggiornamento che verifica una release firmata, fa un backup e torna indietro in caso di errore.</p>
 
     <h2>Perché la cronologia pubblica è breve</h2>
     <p>I repository pubblici partono da una copia pulita del codice, quindi la cronologia di sviluppo precedente al rilascio pubblico non è inclusa.</p>

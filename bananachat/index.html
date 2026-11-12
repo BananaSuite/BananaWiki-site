@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <title>BananaChat: local and hosted models in one chat</title>
 <meta name="description" content="Self-host BananaChat for your group: local and hosted models, shared quotas, files, API access and optional coding sessions in isolated workspaces.">
-<link rel="stylesheet" href="../style.css?v=10e3c4edc171">
+<link rel="stylesheet" href="../style.css?v=39dba552f508">
 <link rel="stylesheet" href="../mascot/mascot.css?v=d0df485fcacd">
 <script src="../mascot/mascot.js?v=a9cfc980d2fd" defer></script>
 <link rel="icon" type="image/png" href="../img/banana_yellow.png?v=ba9c9053f412">
@@ -29,6 +29,8 @@
             <a href="#screenshots">Screenshots</a>
             <a href="#install">Install</a>
             <a href="../">BananaWiki</a>
+            <a href="../bananagit/">BananaGit</a>
+            <a href="../bananavibe/">BananaVibe</a>
             <a class="nav-language" href="index.it.html" lang="it" hreflang="it">Italiano</a>
             <a class="nav-language" href="index.de.html" lang="de" hreflang="de">Deutsch</a>
             <a class="nav-button" href="https://github.com/BananaSuite/BananaChat">Source on GitHub</a>
@@ -53,7 +55,7 @@
 <div class="band">
     <div class="container">
         <figure class="hero-figure">
-            <a class="hero-figure-link" href="../img/bananachat.png?v=bea8f65526ee" aria-label="Open the BananaChat conversation screenshot at full size"><img src="../img/bananachat.png?v=bea8f65526ee" alt="A BananaChat conversation with the chat history in the sidebar and the model, reasoning and personality choices under the message box" width="1280" height="800" fetchpriority="high"></a>
+            <a class="hero-figure-link" href="../img/bananachat.png?v=37fd46989a12" aria-label="Open the BananaChat conversation screenshot at full size"><img src="../img/bananachat.png?v=37fd46989a12" alt="A BananaChat conversation with the chat history in the sidebar and the model, reasoning and personality choices under the message box" width="1280" height="800" fetchpriority="high"></a>
             <figcaption>A conversation and its history, with the model, reasoning and attachment controls beside the message box.</figcaption>
         </figure>
         <dl class="facts">
@@ -141,27 +143,27 @@
         </header>
         <div class="gallery">
             <figure>
-                <a class="screenshot-link" href="../img/bananachat-models.png?v=1b97900d6872" aria-label="Open the model picker screenshot at full size"><img src="../img/bananachat-models.png?v=1b97900d6872" alt="The model picker beside the message box, with model names and feature labels" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="../img/bananachat-models.png?v=ca5aaff35283" aria-label="Open the model picker screenshot at full size"><img src="../img/bananachat-models.png?v=ca5aaff35283" alt="The model picker beside the message box, with model names and feature labels" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>Choosing a model, with names and features side by side. Reasoning options appear for models that support them.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="../img/bananachat-customize.png?v=2d9ff24b1c21" aria-label="Open the Appearance screenshot at full size"><img src="../img/bananachat-customize.png?v=2d9ff24b1c21" alt="BananaChat’s Appearance page with theme, language and text size settings" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="../img/bananachat-customize.png?v=7f05be46ed8c" aria-label="Open the Appearance screenshot at full size"><img src="../img/bananachat-customize.png?v=7f05be46ed8c" alt="BananaChat’s Appearance page with theme, language and text size settings" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>Appearance settings, where each person chooses the theme, language and text size.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="../img/bananachat-cloud-session.png?v=298bc225ef3c" aria-label="Open the cloud session screenshot at full size"><img src="../img/bananachat-cloud-session.png?v=298bc225ef3c" alt="A coding session with tool activity, command output and a file browser for its workspace" width="1280" height="1282" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="../img/bananachat-cloud-session.png?v=fd2a1ea88c9e" aria-label="Open the cloud session screenshot at full size"><img src="../img/bananachat-cloud-session.png?v=fd2a1ea88c9e" alt="A coding session with tool activity, command output and a file browser for its workspace" width="1280" height="1281" loading="lazy" decoding="async"></a>
                 <figcaption>A cloud session, with tool activity next to the files in the workspace.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="../img/bananachat-api.png?v=9838e1c1a93e" aria-label="Open the API screenshot at full size"><img src="../img/bananachat-api.png?v=9838e1c1a93e" alt="The API page: the five-hour token allowance, the request rate and the API keys" width="1280" height="2000" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="../img/bananachat-api.png?v=db7cf9b4f8fc" aria-label="Open the API screenshot at full size"><img src="../img/bananachat-api.png?v=db7cf9b4f8fc" alt="The API page: the five-hour token allowance, the request rate and the API keys" width="1280" height="2093" loading="lazy" decoding="async"></a>
                 <figcaption>API keys and usage, showing the allowance, the request rate and the keys.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="../img/bananachat-providers.png?v=82537911fbed" aria-label="Open the providers screenshot at full size"><img src="../img/bananachat-providers.png?v=82537911fbed" alt="External API providers in the administration: presets, base URLs and the models each provider offers" width="1280" height="2176" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="../img/bananachat-providers.png?v=42539f42f73f" aria-label="Open the providers screenshot at full size"><img src="../img/bananachat-providers.png?v=42539f42f73f" alt="External API providers in the administration: presets, base URLs and the models each provider offers" width="1280" height="2179" loading="lazy" decoding="async"></a>
                 <figcaption>The providers page, where you add a base URL and a key, test the connection and choose the models your group can use.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="../img/bananachat-claude-pool.png?v=aaa7b6ad7dc5" aria-label="Open the subscription pool screenshot at full size"><img src="../img/bananachat-claude-pool.png?v=aaa7b6ad7dc5" alt="A Claude Code subscription pool in the administration: the accounts with their remaining five-hour and weekly allowance" width="1280" height="3968" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="../img/bananachat-claude-pool.png?v=c6affcc45f74" aria-label="Open the subscription pool screenshot at full size"><img src="../img/bananachat-claude-pool.png?v=c6affcc45f74" alt="A Claude Code subscription pool in the administration: the accounts with their remaining five-hour and weekly allowance" width="1280" height="4004" loading="lazy" decoding="async"></a>
                 <figcaption>Subscription pools, showing what each account has left and the share it may use. Codex pools look the same.</figcaption>
             </figure>
         </div>

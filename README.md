@@ -1,8 +1,10 @@
 # bananawiki.com
 
 Source of the bananawiki.com website, the landing site for
-[BananaWiki](https://github.com/BananaSuite/BananaWiki) and
-[BananaChat](https://github.com/BananaSuite/BananaChat). It is plain HTML, one
+[BananaWiki](https://github.com/BananaSuite/BananaWiki),
+[BananaChat](https://github.com/BananaSuite/BananaChat),
+[BananaGit](https://github.com/BananaSuite/BananaGit) and
+[BananaVibe](https://github.com/BananaSuite/BananaVibe). It is plain HTML, one
 stylesheet and the header's mascot, with no build step. Maintained by Luca Zani
 and contributors.
 
@@ -13,12 +15,15 @@ index.html, index.*.html                 home pages, English, Italian and German
 unavailable.html, unavailable.*.html     home pages for when hosted sign-up is closed
 about/, terms/, privacy/                 information and policy pages, English, Italian and German
 bananachat/                              BananaChat pages, English, Italian and German
+bananagit/, bananavibe/                  BananaGit and BananaVibe pages, English, Italian and German
 style.css                                shared stylesheet
 mascot/                                  script and styles of the mascot in the header
 img/                                     icons and screenshots
 CNAME, .nojekyll                         static hosting metadata
 LICENSE                                  GNU AGPL version 3
 tests/                                   checks for the pages
+screenshots/                             capture scripts for the screenshots
+.github/workflows/screenshots.yml        daily recapture of the screenshots
 ```
 
 ## Preview and update
@@ -53,11 +58,13 @@ and `.brand-name`, then `nav.nav` with the page's links, the other languages
 and one `.nav-button`), `main#content` and `footer.site-footer`. The home and
 BananaChat pages are made of `section.section` blocks, each starting with a
 `header.section-header`; the hero screenshot sits in `.band`, the yellow strip
-that starts behind its lower part and holds its caption and `dl.facts`. The
+that starts behind its lower part and holds its caption and `dl.facts`. The The
 about, terms and privacy pages are one `article.page`.
 
 style.css is written mobile first: the base rules are the phone layout and
-the `min-width` media queries add columns. Colours, fonts and sizes are custom
+the `min-width` media queries add columns. On phones the header's links are
+one row that scrolls sideways, the hero buttons are full width and each
+gallery is a row of screenshots to swipe through. Colours, fonts and sizes are custom
 properties on `:root` (`--color-bg`, `--color-text`, `--color-accent`,
 `--color-band` and so on); use them rather than new values. Yellow is for the
 primary buttons, focus rings and the band; everything else stays in the greys.
@@ -84,9 +91,9 @@ Copy conventions:
 
 Capture screenshots from disposable instances of the current apps with
 sample data, never from a real deployment. Use English, the dark theme and a
-1280 by 800 viewport. The hosting dashboard uses the portal's default light
-theme. The two hero screenshots, `wiki-home.png` and
-`bananachat.png`, must be exactly 1280 by 800: the yellow band is drawn for
+1280 by 800 viewport. The hosting dashboard is captured in the portal's dark
+theme, as the published image always was. The hero screenshots (`wiki-home.png`, `bananachat.png`,
+`bananagit.png` and `bananavibe.png`) must be exactly 1280 by 800: the yellow band is drawn for
 that shape, and a test checks it. The gallery and the hosting section show a
 16:10 preview cut from the top of each image and link to the whole file, so
 long pages (API keys, providers, subscription pools) can be full-page captures
@@ -102,7 +109,11 @@ and the hosting dashboard (`wiki-home`, `editor`, `editor-images`,
 BananaChat a conversation, the model picker, Appearance, a cloud session, the
 API page, the providers and a subscription pool (`bananachat`,
 `bananachat-models`, `bananachat-customize`, `bananachat-cloud-session`,
-`bananachat-api`, `bananachat-providers`, `bananachat-claude-pool`). Each
+`bananachat-api`, `bananachat-providers`, `bananachat-claude-pool`), and for
+BananaGit a repository, its issues and a pull request (`bananagit`,
+`bananagit-issues`, `bananagit-pull-request`), and for BananaVibe its
+dashboard, drawn from the terminal's output during a run with scripted
+stand-in agents (`bananavibe`). Each
 image's `alt` text describes what the capture shows; update it with the image.
 
 After replacing an image:
@@ -125,6 +136,41 @@ img/.
 `img/banana_yellow.png` (32x32) and `img/apple-touch-icon.png` (180x180) are
 copies of BananaWiki's icons. BananaWiki's `scripts/make_icons.py` draws them
 and writes these copies when this checkout sits next to BananaWiki.
+
+### Automatic captures
+
+`screenshots/apps.json` lists the apps: their repository, the command that
+builds a checkout, whether `screenshots/` has a capture module for them, and
+the commit their published screenshots were taken from. A module is
+`screenshots/NAME.py` with a `capture(src, page, shoot)` function: it starts a
+throwaway instance from the built checkout in `src`, fills it with sample
+data and calls `shoot("file.png")` for each image.
+
+```sh
+python3 -m pip install playwright pillow pyte && python3 -m playwright install chromium
+python3 screenshots/capture.py --outdated                # apps whose repository has moved
+python3 screenshots/capture.py bananagit --src ../BananaGit
+```
+
+A capture writes the images to img/, compresses them, updates their `?v=`
+versions, widths and heights on every page and records the commit.
+`.github/workflows/screenshots.yml` does this once a day for every app whose
+repository has moved, runs the tests and commits the result to this
+repository; it can also be started by hand, with an option to recapture
+everything. BananaWiki, BananaChat, BananaGit and BananaVibe each have a
+module; an app
+listed without one is only reported in the run's summary. New images,
+captions and `alt` texts are still added to the pages by hand; the workflow
+replaces images that pages already show.
+
+Nothing real stands behind the sample data. BananaChat's answers come from
+the imitation model server and sandbox runner of its own tests, and its
+subscription pool from a stand-in for the Claude Code command. The hosting
+dashboard comes from the portal with its in-memory runtime, so no containers
+exist and the storage figures are sample numbers. The modules use the apps'
+own commands, APIs and forms where they can, and a few internals where they
+cannot; when an app changes those, the capture fails and the old images
+stay.
 
 ## Mascot
 
@@ -179,7 +225,7 @@ rules of the hosting code. Checks whose sources are missing are skipped.
 ## Publishing
 
 Upload the HTML files, style.css, img/, mascot/, about/, terms/, privacy/,
-bananachat/, CNAME and .nojekyll to the site root, keeping the directory
+bananachat/, bananagit/, bananavibe/, CNAME and .nojekyll to the site root, keeping the directory
 layout. Remove published files that the update deleted. Keep `.git/`,
 credentials and other private files out of the web root.
 

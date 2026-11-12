@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <title>Über BananaWiki</title>
 <meta name="description" content="Woher BananaWiki kommt, wer daran arbeitet und wie der gehostete Dienst betrieben wird.">
-<link rel="stylesheet" href="../style.css?v=10e3c4edc171">
+<link rel="stylesheet" href="../style.css?v=39dba552f508">
 <link rel="stylesheet" href="../mascot/mascot.css?v=d0df485fcacd">
 <script src="../mascot/mascot.js?v=a9cfc980d2fd" defer></script>
 <link rel="icon" type="image/png" href="../img/banana_yellow.png?v=ba9c9053f412">
@@ -28,6 +28,8 @@
             <a href="../index.de.html#features">Funktionen</a>
             <a href="../index.de.html#self-host">Selbst betreiben</a>
             <a href="../bananachat/index.de.html">BananaChat</a>
+            <a href="../bananagit/index.de.html">BananaGit</a>
+            <a href="../bananavibe/index.de.html">BananaVibe</a>
             <a href="https://hosting.bananawiki.com/help?lang=de" data-only="available">Hilfe</a>
             <a class="nav-language" href="index.html" lang="en" hreflang="en">English</a>
             <a class="nav-language" href="index.it.html" lang="it" hreflang="it">Italiano</a>
@@ -57,12 +59,13 @@
         <li><time datetime="2026-08">August 2026</time><p>Die Arbeit an BananaVibe begann. Das Werkzeug hieß zuerst BananaAgent und sorgt dafür, dass Coding-Agents an langen Aufgaben weiterarbeiten.</p></li>
         <li><time datetime="2026-09">September 2026</time><p>BananaWiki, BananaChat und BananaVibe wurden als freie Software unter der GNU AGPL veröffentlicht. Ende des Monats ersetzte BananaWiki 1.6, eine Neufassung, die erste öffentliche Version, zusammen mit einem neu gestalteten Hosting-Portal.</p></li>
         <li><time datetime="2026-10">Oktober 2026</time><p>BananaWiki 1.7 brachte die deutsche Oberfläche, und neue Serverinstallationen aktualisieren sich seitdem auf Release-Tags. BananaChat 1.7 brachte externe API-Anbieter. BananaVibe 1.0 erschien als Kommandozeilenwerkzeug. BananaWiki 1.7.2 brachte Bildoptionen im Seiteneditor und verlässlichere Zertifikate für neu gehostete Wikis, und BananaChat 1.7.2 brachte Abonnement-Pools für Claude Code und Codex.</p></li>
-        <li><time datetime="2026-11">November 2026</time><p>BananaWiki 1.8 und BananaChat 1.8 haben ihre Einstellungs- und Verwaltungsseiten vereinfacht, und das Hosting-Portal hat ein neues Aussehen bekommen.</p></li>
+        <li><time datetime="2026-11">November 2026</time><p>BananaWiki 1.8 und BananaChat 1.8 haben ihre Einstellungs- und Verwaltungsseiten vereinfacht, und das Hosting-Portal hat ein neues Aussehen bekommen. BananaGit, ein Fork von Gitea für unsere Git-Projekte, wurde veröffentlicht.</p></li>
     </ol>
 
     <h2>Die beiden anderen Projekte</h2>
     <p><a href="https://github.com/BananaSuite/BananaChat">BananaChat</a> begann als BananaAI, aus dem Wunsch heraus, KI-Modelle selbst zu hosten. Es entstand im Wiki und läuft heute eigenständig, als Möglichkeit, Menschen an lokale KI heranzuführen.</p>
     <p><a href="https://github.com/BananaSuite/BananaVibe">BananaVibe</a> ist ein Kommandozeilenwerkzeug, das Coding-Agents wie Claude Code, Codex oder OpenCode an einem Ziel arbeiten lässt. Jede Sitzung beginnt mit frischem Kontext, und Plan und Notizen werden in Dateien und in Git festgehalten. Wenn ein Agent meldet, dass die Arbeit fertig ist, führt BananaVibe deine Prüfungen aus und lässt einen unabhängigen Prüfagenten das Ergebnis begutachten. Die Arbeit der Agenten wird in einen eigenen Branch jedes Repositorys committet.</p>
+    <p><a href="https://github.com/BananaSuite/BananaGit">BananaGit</a> ist ein Fork von Gitea, um unsere Git-Projekte zu hosten. Es behält die Funktionen von Gitea und ergänzt das Aussehen von BananaSuite sowie einen Updater, der ein signiertes Release prüft, ein Backup anlegt und bei Fehlern zurückrollt.</p>
 
     <h2>Warum die öffentliche Geschichte kurz ist</h2>
     <p>Die öffentlichen Repositorys beginnen mit einer sauberen Kopie des Quellcodes, daher ist die Entwicklungsgeschichte vor der Veröffentlichung nicht enthalten.</p>

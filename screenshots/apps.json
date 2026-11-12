@@ -1,0 +1,25 @@
+{
+  "bananagit": {
+    "repo": "BananaSuite/BananaGit",
+    "module": true,
+    "build": "TAGS=\"sqlite sqlite_unlock_notify\" make build",
+    "commit": "138e793df0e355d37082c424dc95c79e546d27ff"
+  },
+  "bananawiki": {
+    "repo": "BananaSuite/BananaWiki",
+    "module": true,
+    "build": "python3 -m venv .venv && .venv/bin/python -m pip install -q -e .",
+    "commit": "2b3bd4a9fbc3d8efe37cd14a054558d65487241a"
+  },
+  "bananachat": {
+    "repo": "BananaSuite/BananaChat",
+    "module": true,
+    "build": "python3 -m venv .venv && .venv/bin/python -m pip install -q --only-binary=:all: -r requirements.txt",
+    "commit": "8abd040a7f9e445b80e38f7ac9c8b25a1d46eefd"
+  },
+  "bananavibe": {
+    "repo": "BananaSuite/BananaVibe",
+    "module": true,
+    "commit": "f1e2bb2d7356fe05628329fa144b8be17d0886e9"
+  }
+}

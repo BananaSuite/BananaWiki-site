@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <title>BananaChat: lokale und gehostete Modelle in einem Chat</title>
 <meta name="description" content="Betreibe BananaChat selbst für deine Gruppe: lokale und gehostete Modelle, gemeinsame Kontingente, Dateien, API-Zugang und optionale Coding-Sitzungen in isolierten Arbeitsbereichen.">
-<link rel="stylesheet" href="../style.css?v=10e3c4edc171">
+<link rel="stylesheet" href="../style.css?v=39dba552f508">
 <link rel="stylesheet" href="../mascot/mascot.css?v=d0df485fcacd">
 <script src="../mascot/mascot.js?v=a9cfc980d2fd" defer></script>
 <link rel="icon" type="image/png" href="../img/banana_yellow.png?v=ba9c9053f412">
@@ -29,6 +29,8 @@
             <a href="#screenshots">Screenshots</a>
             <a href="#install">Installation</a>
             <a href="../index.de.html">BananaWiki</a>
+            <a href="../bananagit/index.de.html">BananaGit</a>
+            <a href="../bananavibe/index.de.html">BananaVibe</a>
             <a class="nav-language" href="index.html" lang="en" hreflang="en">English</a>
             <a class="nav-language" href="index.it.html" lang="it" hreflang="it">Italiano</a>
             <a class="nav-button" href="https://github.com/BananaSuite/BananaChat">Quellcode auf GitHub</a>
@@ -53,7 +55,7 @@
 <div class="band">
     <div class="container">
         <figure class="hero-figure">
-            <a class="hero-figure-link" href="../img/bananachat.png?v=bea8f65526ee" aria-label="Den Screenshot einer BananaChat-Unterhaltung in voller Größe öffnen"><img src="../img/bananachat.png?v=bea8f65526ee" alt="Eine Unterhaltung in BananaChat mit dem Chatverlauf in der Seitenleiste und der Auswahl von Modell, Denkaufwand und Persönlichkeit unter dem Nachrichtenfeld" width="1280" height="800" fetchpriority="high"></a>
+            <a class="hero-figure-link" href="../img/bananachat.png?v=37fd46989a12" aria-label="Den Screenshot einer BananaChat-Unterhaltung in voller Größe öffnen"><img src="../img/bananachat.png?v=37fd46989a12" alt="Eine Unterhaltung in BananaChat mit dem Chatverlauf in der Seitenleiste und der Auswahl von Modell, Denkaufwand und Persönlichkeit unter dem Nachrichtenfeld" width="1280" height="800" fetchpriority="high"></a>
             <figcaption>Eine Unterhaltung und ihr Verlauf, mit Modell, Denkaufwand und Anhängen neben dem Nachrichtenfeld. Die Oberfläche ist auf Englisch zu sehen.</figcaption>
         </figure>
         <dl class="facts">
@@ -141,27 +143,27 @@
         </header>
         <div class="gallery">
             <figure>
-                <a class="screenshot-link" href="../img/bananachat-models.png?v=1b97900d6872" aria-label="Den Screenshot der Modellauswahl in voller Größe öffnen"><img src="../img/bananachat-models.png?v=1b97900d6872" alt="Die Modellauswahl neben dem Nachrichtenfeld, mit den Namen der Modelle und ihren Funktionen" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="../img/bananachat-models.png?v=ca5aaff35283" aria-label="Den Screenshot der Modellauswahl in voller Größe öffnen"><img src="../img/bananachat-models.png?v=ca5aaff35283" alt="Die Modellauswahl neben dem Nachrichtenfeld, mit den Namen der Modelle und ihren Funktionen" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>Die Modellauswahl, mit Namen und Funktionen nebeneinander. Die Auswahl des Denkaufwands erscheint bei Modellen, die ihn unterstützen.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="../img/bananachat-customize.png?v=2d9ff24b1c21" aria-label="Den Screenshot der Darstellung in voller Größe öffnen"><img src="../img/bananachat-customize.png?v=2d9ff24b1c21" alt="Die Seite Darstellung in BananaChat mit Design, Sprache und Textgröße" width="1280" height="800" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="../img/bananachat-customize.png?v=7f05be46ed8c" aria-label="Den Screenshot der Darstellung in voller Größe öffnen"><img src="../img/bananachat-customize.png?v=7f05be46ed8c" alt="Die Seite Darstellung in BananaChat mit Design, Sprache und Textgröße" width="1280" height="800" loading="lazy" decoding="async"></a>
                 <figcaption>Die Darstellungseinstellungen, in denen jede Person Design, Sprache und Textgröße wählt.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="../img/bananachat-cloud-session.png?v=298bc225ef3c" aria-label="Den Screenshot der Cloud-Sitzung in voller Größe öffnen"><img src="../img/bananachat-cloud-session.png?v=298bc225ef3c" alt="Eine Coding-Sitzung mit Werkzeugaktivität, Befehlsausgaben und einem Dateibrowser für ihren Arbeitsbereich" width="1280" height="1282" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="../img/bananachat-cloud-session.png?v=fd2a1ea88c9e" aria-label="Den Screenshot der Cloud-Sitzung in voller Größe öffnen"><img src="../img/bananachat-cloud-session.png?v=fd2a1ea88c9e" alt="Eine Coding-Sitzung mit Werkzeugaktivität, Befehlsausgaben und einem Dateibrowser für ihren Arbeitsbereich" width="1280" height="1281" loading="lazy" decoding="async"></a>
                 <figcaption>Eine Cloud-Sitzung, mit der Werkzeugaktivität neben den Dateien des Arbeitsbereichs.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="../img/bananachat-api.png?v=9838e1c1a93e" aria-label="Den Screenshot der API-Seite in voller Größe öffnen"><img src="../img/bananachat-api.png?v=9838e1c1a93e" alt="Die API-Seite: das Token-Kontingent für fünf Stunden, die Anfragerate und die API-Schlüssel" width="1280" height="2000" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="../img/bananachat-api.png?v=db7cf9b4f8fc" aria-label="Den Screenshot der API-Seite in voller Größe öffnen"><img src="../img/bananachat-api.png?v=db7cf9b4f8fc" alt="Die API-Seite: das Token-Kontingent für fünf Stunden, die Anfragerate und die API-Schlüssel" width="1280" height="2093" loading="lazy" decoding="async"></a>
                 <figcaption>API-Schlüssel und Nutzung, mit deinem Kontingent, deiner Anfragerate und deinen Schlüsseln.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="../img/bananachat-providers.png?v=82537911fbed" aria-label="Den Screenshot der Anbieter in voller Größe öffnen"><img src="../img/bananachat-providers.png?v=82537911fbed" alt="Externe API-Anbieter in der Verwaltung: Voreinstellungen, Basis-URLs und die Modelle jedes Anbieters" width="1280" height="2176" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="../img/bananachat-providers.png?v=42539f42f73f" aria-label="Den Screenshot der Anbieter in voller Größe öffnen"><img src="../img/bananachat-providers.png?v=42539f42f73f" alt="Externe API-Anbieter in der Verwaltung: Voreinstellungen, Basis-URLs und die Modelle jedes Anbieters" width="1280" height="2179" loading="lazy" decoding="async"></a>
                 <figcaption>Die Anbieterseite, auf der du eine Basis-URL und einen Schlüssel einträgst, die Verbindung prüfst und wählst, welche Modelle deine Gruppe nutzen darf.</figcaption>
             </figure>
             <figure>
-                <a class="screenshot-link" href="../img/bananachat-claude-pool.png?v=aaa7b6ad7dc5" aria-label="Den Screenshot des Abonnement-Pools in voller Größe öffnen"><img src="../img/bananachat-claude-pool.png?v=aaa7b6ad7dc5" alt="Ein Pool aus Claude-Code-Abonnements in der Verwaltung: die Konten mit ihrem verbleibenden Kontingent für fünf Stunden und für die Woche" width="1280" height="3968" loading="lazy" decoding="async"></a>
+                <a class="screenshot-link" href="../img/bananachat-claude-pool.png?v=c6affcc45f74" aria-label="Den Screenshot des Abonnement-Pools in voller Größe öffnen"><img src="../img/bananachat-claude-pool.png?v=c6affcc45f74" alt="Ein Pool aus Claude-Code-Abonnements in der Verwaltung: die Konten mit ihrem verbleibenden Kontingent für fünf Stunden und für die Woche" width="1280" height="4004" loading="lazy" decoding="async"></a>
                 <figcaption>Abonnement-Pools, die zeigen, was jedem Konto bleibt und welchen Anteil es nutzen darf. Codex-Pools sehen genauso aus.</figcaption>
             </figure>
         </div>
