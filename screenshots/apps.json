@@ -3,7 +3,7 @@
     "repo": "BananaSuite/BananaGit",
     "module": true,
     "build": "TAGS=\"sqlite sqlite_unlock_notify\" make build",
-    "commit": "138e793df0e355d37082c424dc95c79e546d27ff"
+    "commit": "d8c8b948644ddfc90134e3f7aad9d7edaeb59b45"
   },
   "bananawiki": {
     "repo": "BananaSuite/BananaWiki",
