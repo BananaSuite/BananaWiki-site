@@ -3,13 +3,13 @@
     "repo": "BananaSuite/BananaGit",
     "module": true,
     "build": "TAGS=\"sqlite sqlite_unlock_notify\" make build",
-    "commit": "9809ba676a07a6a531b47178133990f0d097a948"
+    "commit": "d446f2bf4427fd631d4a35bbce96add941365d66"
   },
   "bananawiki": {
     "repo": "BananaSuite/BananaWiki",
     "module": true,
     "build": "python3 -m venv .venv && .venv/bin/python -m pip install -q -e .",
-    "commit": "6a39d71e67a510825eba58dae0d43a6b63febfe4"
+    "commit": "e14c724a20fa57b0be6b9d8cae382f57669167db"
   },
   "bananachat": {
     "repo": "BananaSuite/BananaChat",
