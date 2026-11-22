@@ -9,7 +9,7 @@
     "repo": "BananaSuite/BananaWiki",
     "module": true,
     "build": "python3 -m venv .venv && .venv/bin/python -m pip install -q -e .",
-    "commit": "e14c724a20fa57b0be6b9d8cae382f57669167db"
+    "commit": "30f2d753bf2d1e83c92eaae9b7c56ded0e5c1ac5"
   },
   "bananachat": {
     "repo": "BananaSuite/BananaChat",
