@@ -9,13 +9,13 @@
     "repo": "BananaSuite/BananaWiki",
     "module": true,
     "build": "python3 -m venv .venv && .venv/bin/python -m pip install -q -e .",
-    "commit": "30f2d753bf2d1e83c92eaae9b7c56ded0e5c1ac5"
+    "commit": "65d6700d794045ba319a7487d6d4b8db8ca6380d"
   },
   "bananachat": {
     "repo": "BananaSuite/BananaChat",
     "module": true,
     "build": "python3 -m venv .venv && .venv/bin/python -m pip install -q --only-binary=:all: -r requirements.txt",
-    "commit": "f05158d37517d52cfd4f19c623b116e40104183e"
+    "commit": "2f7d0058826e1a0e811fc1d4e6eee7e65275b9c4"
   },
   "bananavibe": {
     "repo": "BananaSuite/BananaVibe",
