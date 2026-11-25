@@ -10,7 +10,7 @@
 <meta name="description" content="Self-host BananaGit for your projects: Gitea’s repository hosting, code review, issues and CI/CD, with the BananaSuite look and a signed updater that rolls back on failure.">
 <link rel="stylesheet" href="../style.css?v=39dba552f508">
 <link rel="stylesheet" href="../mascot/mascot.css?v=d0df485fcacd">
-<script src="../mascot/mascot.js?v=a9cfc980d2fd" defer></script>
+<script src="../mascot/mascot.js?v=56b8cd891bb7" defer></script>
 <link rel="icon" type="image/png" href="../img/banana_yellow.png?v=ba9c9053f412">
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png?v=4541d0cbd66c">
 <link rel="alternate" hreflang="it" href="index.it.html">
@@ -80,6 +80,9 @@
             <tbody>
                 <tr><th scope="row">Look</th><td data-label="Gitea">Gitea’s themes.</td><td data-label="BananaGit">Adds light, dark and automatic BananaGit themes, and makes the automatic one the default.</td></tr>
                 <tr><th scope="row">Name and logo</th><td data-label="Gitea">“Gitea” and the tea cup.</td><td data-label="BananaGit">“BananaGit” and the BananaSuite banana. The footer says “Powered by Gitea (BananaGit)”.</td></tr>
+                <tr><th scope="row">Home page</th><td data-label="Gitea">Gitea’s landing page.</td><td data-label="BananaGit">A short page with the logo, the name, your description and the sign-in buttons.</td></tr>
+                <tr><th scope="row">Sign-in</th><td data-label="Gitea">Passwords, passkeys and the OAuth2 providers Gitea ships.</td><td data-label="BananaGit">Adds BananaWiki Hosting as a provider, and a setting that makes it the only way to sign in on the web.</td></tr>
+                <tr><th scope="row">Easter eggs</th><td data-label="Gitea">None.</td><td data-label="BananaGit">Key sequences that an administrator designs, such as the Konami code, in the format the whole suite shares.</td></tr>
                 <tr><th scope="row">Updates</th><td data-label="Gitea">You replace the binary yourself.</td><td data-label="BananaGit">One command verifies, backs up, installs, checks and rolls back.</td></tr>
                 <tr><th scope="row">Release binaries</th><td data-label="Gitea">Many platforms, with SQLite included.</td><td data-label="BananaGit">Linux on amd64 and arm64, built without SQLite by default.</td></tr>
                 <tr><th scope="row">Forgejo</th><td data-label="Gitea">No supported path.</td><td data-label="BananaGit">A one-way migration in place that you can rehearse on a copy first.</td></tr>
@@ -141,8 +144,8 @@ sudo bananagit-update update</code></pre>
             <h2 id="story-title">How it relates to BananaWiki</h2>
         </header>
         <div class="story">
-            <p>We made BananaGit to host our own Git projects. It uses the same banana logo as BananaWiki and BananaChat, and it’s installed separately from both.</p>
-            <p>Changes that aren’t about BananaGit’s name, look or updater belong in <a href="https://github.com/go-gitea/gitea">Gitea</a>. The <a href="../about/">About</a> page tells the story of the other projects.</p>
+            <p>We made BananaGit to host our own Git projects. It uses the same banana logo as BananaWiki and BananaChat, and it’s installed separately from both. People can sign in with a BananaWiki Hosting account once an administrator has set that up, as the <a href="https://github.com/BananaSuite/BananaGit/blob/main/bananagit/docs/bananawiki-hosting-login.md">sign-in guide</a> explains.</p>
+            <p>Changes that aren’t among the differences listed on this page belong in <a href="https://github.com/go-gitea/gitea">Gitea</a>. Luca Zani’s post <a href="https://lucazani.com/blog/bananagit/">BananaGit, and what we’re working on next</a> tells why it’s based on Gitea and what comes next. The <a href="../about/">About</a> page tells the story of the other projects.</p>
         </div>
     </div>
 </section>

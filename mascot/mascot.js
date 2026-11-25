@@ -2,10 +2,12 @@
 // sunglasses on, kept in this browser, and as many again take them off. The Konami code anywhere on the page
 // sends a short shower of small bananas. The button carries its labels in the page's language and stays
 // disabled, a still picture, until this script runs.
-// Each easter egg can be switched off on the button, as in the apps: no data-mascot-clicks, or "0", turns the
-// sunglasses off (clicks only hop, nothing is saved), and data-mascot-konami="off" turns the Konami code off.
+// Each easter egg can be switched off on the button: no data-mascot-clicks, or "0", turns the sunglasses off
+// (clicks only hop, nothing is saved), and data-mascot-konami="off" turns the Konami code off. In the apps the
+// key sequences now belong to the BananaSuite easter eggs (banana-eggs.js), which an administrator designs; this
+// site has no settings, so it keeps the one Konami shower here.
 //
-// Ported from BananaWiki mascot 14d63ec44444 (bananawiki/core/mascot.py and bananawiki/core/static/mascot/
+// Ported from BananaWiki mascot a4d2870e4ed4 (bananawiki/core/mascot.py and bananawiki/core/static/mascot/
 // in that tree). When those change, BananaWiki's scripts/make_icons.py fails until the change is ported here
 // and recorded with its --ported option.
 (() => {

@@ -10,7 +10,7 @@
 <meta name="description" content="Installa BananaGit per i tuoi progetti: repository, revisione del codice, segnalazioni e CI/CD di Gitea, con l’aspetto di BananaSuite e un aggiornamento firmato che torna indietro se qualcosa va storto.">
 <link rel="stylesheet" href="../style.css?v=39dba552f508">
 <link rel="stylesheet" href="../mascot/mascot.css?v=d0df485fcacd">
-<script src="../mascot/mascot.js?v=a9cfc980d2fd" defer></script>
+<script src="../mascot/mascot.js?v=56b8cd891bb7" defer></script>
 <link rel="icon" type="image/png" href="../img/banana_yellow.png?v=ba9c9053f412">
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png?v=4541d0cbd66c">
 <link rel="alternate" hreflang="en" href="index.html">
@@ -80,6 +80,9 @@
             <tbody>
                 <tr><th scope="row">Aspetto</th><td data-label="Gitea">I temi di Gitea.</td><td data-label="BananaGit">Aggiunge i temi BananaGit chiaro, scuro e automatico, e usa quello automatico come predefinito.</td></tr>
                 <tr><th scope="row">Nome e logo</th><td data-label="Gitea">«Gitea» e la tazza di tè.</td><td data-label="BananaGit">«BananaGit» e la banana di BananaSuite. Il piè di pagina dice «Powered by Gitea (BananaGit)».</td></tr>
+                <tr><th scope="row">Pagina iniziale</th><td data-label="Gitea">La pagina iniziale di Gitea.</td><td data-label="BananaGit">Una pagina breve con il logo, il nome, la tua descrizione e i pulsanti di accesso.</td></tr>
+                <tr><th scope="row">Accesso</th><td data-label="Gitea">Password, passkey e i provider OAuth2 inclusi in Gitea.</td><td data-label="BananaGit">Aggiunge BananaWiki Hosting come provider, e un’impostazione che lo rende l’unico modo di accedere dal web.</td></tr>
+                <tr><th scope="row">Easter egg</th><td data-label="Gitea">Nessuno.</td><td data-label="BananaGit">Sequenze di tasti create dagli amministratori, come il codice Konami, nel formato condiviso da tutta la suite.</td></tr>
                 <tr><th scope="row">Aggiornamenti</th><td data-label="Gitea">Sostituisci tu il binario.</td><td data-label="BananaGit">Un solo comando verifica, fa il backup, installa, controlla e ripristina.</td></tr>
                 <tr><th scope="row">Binari delle release</th><td data-label="Gitea">Molte piattaforme, con SQLite incluso.</td><td data-label="BananaGit">Linux su amd64 e arm64, compilati senza SQLite per impostazione predefinita.</td></tr>
                 <tr><th scope="row">Forgejo</th><td data-label="Gitea">Nessun percorso supportato.</td><td data-label="BananaGit">Una migrazione sul posto, in una sola direzione, che puoi provare prima su una copia.</td></tr>
@@ -141,8 +144,8 @@ sudo bananagit-update update</code></pre>
             <h2 id="story-title">Il legame con BananaWiki</h2>
         </header>
         <div class="story">
-            <p>Abbiamo creato BananaGit per ospitare i nostri progetti Git. Usa lo stesso logo con la banana di BananaWiki e BananaChat, e si installa separatamente da entrambi.</p>
-            <p>Le modifiche che non riguardano il nome, l’aspetto o l’aggiornamento di BananaGit vanno proposte a <a href="https://github.com/go-gitea/gitea">Gitea</a>. La pagina <a href="../about/index.it.html">Chi siamo</a> racconta la storia degli altri progetti.</p>
+            <p>Abbiamo creato BananaGit per ospitare i nostri progetti Git. Usa lo stesso logo con la banana di BananaWiki e BananaChat, e si installa separatamente da entrambi. Si può accedere con un account BananaWiki Hosting dopo che un amministratore lo ha configurato, come spiega la <a href="https://github.com/BananaSuite/BananaGit/blob/main/bananagit/docs/bananawiki-hosting-login.md">guida all’accesso</a> (in inglese).</p>
+            <p>Le modifiche che non rientrano tra le differenze elencate in questa pagina vanno proposte a <a href="https://github.com/go-gitea/gitea">Gitea</a>. L’articolo di Luca Zani <a href="https://lucazani.com/blog/bananagit/">BananaGit, and what we’re working on next</a> (in inglese) racconta perché si basa su Gitea e che cosa arriverà. La pagina <a href="../about/index.it.html">Chi siamo</a> racconta la storia degli altri progetti.</p>
         </div>
     </div>
 </section>

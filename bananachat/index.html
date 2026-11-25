@@ -10,7 +10,7 @@
 <meta name="description" content="Self-host BananaChat for your group: local and hosted models, shared quotas, files, API access and optional coding sessions in isolated workspaces.">
 <link rel="stylesheet" href="../style.css?v=39dba552f508">
 <link rel="stylesheet" href="../mascot/mascot.css?v=d0df485fcacd">
-<script src="../mascot/mascot.js?v=a9cfc980d2fd" defer></script>
+<script src="../mascot/mascot.js?v=56b8cd891bb7" defer></script>
 <link rel="icon" type="image/png" href="../img/banana_yellow.png?v=ba9c9053f412">
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png?v=4541d0cbd66c">
 <link rel="alternate" hreflang="it" href="index.it.html">
@@ -114,11 +114,13 @@
                 <h3>Administration</h3>
                 <ul>
                     <li>Users and invitations, and two-step verification for every account, which can be required for administrators</li>
+                    <li>Sign-in with BananaWiki Hosting accounts, beside local accounts or in their place <span class="optional">(optional)</span></li>
                     <li>External API providers with keys encrypted on the server, a connection test and models picked from the provider’s own list</li>
                     <li>Presets for Anthropic, OpenAI, OpenRouter, Google Gemini, Mistral and other OpenAI-compatible services, and for local servers such as LM Studio, vLLM, llama.cpp and LiteLLM (each provider’s billing and terms apply)</li>
                     <li>Pools of Claude Code and Codex subscription accounts, with usage caps and strict model limits <span class="optional">(optional, and shared use needs the provider’s approval)</span></li>
                     <li>Access rules per model and category, token allowances per 5 hours, optional weekly limits and request-rate rules</li>
                     <li>Metrics, an audit log, maintenance mode and theming</li>
+                    <li>Keyboard easter eggs that an administrator designs, starting with the Konami code</li>
                 </ul>
             </section>
             <section class="feature-group">
@@ -247,7 +249,7 @@ sudo bananachat proxy --install</code></pre>
         </header>
         <div class="story">
             <p>BananaChat started as BananaAI, a way to run AI models on your own hardware. It began as part of BananaWiki and was later split out into its own application.</p>
-            <p>The two are separate programs with their own installations and accounts, and BananaWiki doesn’t include a language model. Luca Zani created both and maintains them with contributors. The <a href="../about/">About</a> page tells the full story.</p>
+            <p>The two are separate programs with their own installations, and BananaWiki doesn’t include a language model. Their accounts are separate too, unless an administrator lets people sign in to BananaChat with a BananaWiki Hosting account. Luca Zani created both and maintains them with contributors. The <a href="../about/">About</a> page tells the full story.</p>
         </div>
     </div>
 </section>

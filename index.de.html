@@ -10,7 +10,7 @@
 <meta name="description" content="Schreib Seiten in Markdown, behalte jede Version und lege fest, wer welchen Teil lesen oder ändern darf. Nutze den gehosteten Dienst oder betreibe dieselbe freie Software auf deinem eigenen Server.">
 <link rel="stylesheet" href="style.css?v=39dba552f508">
 <link rel="stylesheet" href="mascot/mascot.css?v=d0df485fcacd">
-<script src="mascot/mascot.js?v=a9cfc980d2fd" defer></script>
+<script src="mascot/mascot.js?v=56b8cd891bb7" defer></script>
 <link rel="icon" type="image/png" href="img/banana_yellow.png?v=ba9c9053f412">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=4541d0cbd66c">
 <link rel="alternate" hreflang="en" href="index.html">
@@ -98,8 +98,9 @@
             <section class="feature-group">
                 <h3>Personen und Zugriff</h3>
                 <ul>
-                    <li>Rollen vom Benutzer bis zum Eigentümer, dazu eigene Rollen aus einzelnen Berechtigungen</li>
+                    <li>Rollen vom Benutzer bis zum Eigentümer, eigene Rollen aus einzelnen Berechtigungen und Änderungen für eine einzelne Person zusätzlich zu ihrer Rolle</li>
                     <li>Lese- und Schreibzugriff pro Kategorie</li>
+                    <li>Anfragen für Schreibzugriff, die Administratoren annehmen oder ablehnen <span class="optional">(optional)</span></li>
                     <li>Einladungscodes, offene Registrierung mit Enddatum und Freischaltung neuer Konten</li>
                     <li>Standardmäßig privat, mit optionalem öffentlichem Lesezugang</li>
                     <li>Bestätigung in zwei Schritten mit einer Authenticator-App, die du für Administratoren vorschreiben kannst</li>
@@ -111,6 +112,7 @@
                 <ul>
                     <li>Kanban-Boards mit Checklisten, Fälligkeitsdaten, Kommentaren, Anhängen und Verlauf</li>
                     <li>Canvas mit Formen, Notizen und Links zu Seiten, und eine Textgliederung für Screenreader</li>
+                    <li>Boards und Canvas, die privat bleiben, bis du sie mit einer Person, einer Rolle oder allen Mitgliedern teilst, zum Ansehen oder zum Bearbeiten</li>
                     <li>Direktnachrichten und Gruppenchats, in denen Mitglieder jemanden blockieren und eine Nachricht melden können</li>
                     <li>Ankündigungsbanner auf der ganzen Website</li>
                     <li>Mitgliederprofile mit Abzeichen und einem Diagramm der Beiträge</li>
@@ -132,6 +134,7 @@
                 <ul>
                     <li>Oberfläche auf Deutsch, Englisch und Italienisch, und du kannst weitere Sprachen hochladen</li>
                     <li>Helle und dunkle Designs in Farben deiner Wahl</li>
+                    <li>Tastatur-Easter-Eggs, die Administratoren gestalten, angefangen beim Konami-Code</li>
                     <li>Eine geführte Tour für neue Mitglieder und ein einfacher Modus, der die erweiterten Werkzeuge ausblendet</li>
                     <li>Export persönlicher Daten für jedes Mitglied sowie Export und Import der ganzen Website für Administratoren</li>
                     <li>REST-API mit Tokens für ausgewählte Bereiche und Webhooks <span class="optional">(optional)</span></li>
@@ -207,6 +210,7 @@
                 <tr><th scope="row">Kosten und Grenzen</th><td data-label="Gehostet">Das Portal zeigt sie an, bevor du ein Wiki erstellst. Neue Wikis beginnen als Testphase mit Enddatum, und du kannst eine Verlängerung beantragen.</td><td data-label="Dein eigener Server">Die Software ist kostenlos, und den Rechner stellst du.</td></tr>
                 <tr><th scope="row">Aktualisierungen</th><td data-label="Gehostet">Der Betreiber spielt sie ein.</td><td data-label="Dein eigener Server">Jede Aktualisierung installiert den neuesten Release-Tag, mit jeder Abhängigkeit über ihren Hash festgelegt. Vorher legt sie ein Backup an, und sie wird zurückgerollt, wenn das Wiki nicht startet. Automatische Aktualisierungen sind aus, bis du sie einschaltest, und sie akzeptieren nur Release-Tags, die mit Schlüsseln signiert sind, denen du vertraust, es sei denn, du erlaubst unsignierte.</td></tr>
                 <tr><th scope="row">Backups</th><td data-label="Gehostet">Der Betreiber erstellt Backups, und du kannst Exporte selbst herunterladen.</td><td data-label="Dein eigener Server">Backup-Pakete, dazu auf Wunsch verschlüsselte und authentifizierte Backups in ein privates GitHub- oder Forgejo-Repository.</td></tr>
+                <tr><th scope="row">Anmeldung</th><td data-label="Gehostet">Jedes Wiki hat eigene Konten. Wer es verwaltet, kann Mitglieder auch mit ihrem Hosting-Konto anmelden lassen oder nur dieses zulassen. Mit demselben Konto meldest du dich beim gehosteten BananaChat an.</td><td data-label="Dein eigener Server">Jedes Wiki hat eigene Konten. Wenn du die Hosting-Plattform betreibst, können ihre Wikis und die Apps, die du dort registrierst, deren Konten genauso nutzen.</td></tr>
                 <tr><th scope="row">Eigene Domain</th><td data-label="Gehostet">Ja, sobald der Betreiber sie für dein Wiki erlaubt.</td><td data-label="Dein eigener Server">Ja.</td></tr>
                 <tr><th scope="row">Öffentlicher Lesezugang und Seitenbaukasten</th><td data-label="Gehostet">Auf Anfrage für dein Wiki verfügbar.</td><td data-label="Dein eigener Server">Du kannst sie selbst einschalten.</td></tr>
                 <tr><th scope="row">Wechseln</th><td data-label="Gehostet">Exportiere das ganze Wiki jederzeit und <a href="https://hosting.bananawiki.com/help/move-to-your-own-server?lang=de">importiere es auf deinem eigenen Server</a>.</td><td data-label="Dein eigener Server">Liegt schon auf deinem Server.</td></tr>

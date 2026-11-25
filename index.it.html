@@ -10,7 +10,7 @@
 <meta name="description" content="Scrivi le pagine in Markdown, conserva ogni revisione e decidi chi può leggere o modificare ogni parte. Usa il servizio hosting oppure lo stesso software libero sul tuo server.">
 <link rel="stylesheet" href="style.css?v=39dba552f508">
 <link rel="stylesheet" href="mascot/mascot.css?v=d0df485fcacd">
-<script src="mascot/mascot.js?v=a9cfc980d2fd" defer></script>
+<script src="mascot/mascot.js?v=56b8cd891bb7" defer></script>
 <link rel="icon" type="image/png" href="img/banana_yellow.png?v=ba9c9053f412">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=4541d0cbd66c">
 <link rel="alternate" hreflang="en" href="index.html">
@@ -98,8 +98,9 @@
             <section class="feature-group">
                 <h3>Persone e accessi</h3>
                 <ul>
-                    <li>Ruoli da utente a proprietario, più ruoli composti da singoli permessi</li>
+                    <li>Ruoli da utente a proprietario, ruoli composti da singoli permessi e modifiche per una sola persona, in aggiunta al suo ruolo</li>
                     <li>Accesso in lettura e scrittura per categoria</li>
+                    <li>Richieste di accesso in modifica, che gli amministratori approvano o rifiutano <span class="optional">(facoltativo)</span></li>
                     <li>Codici di invito, iscrizioni aperte fino a una data e approvazione dei nuovi account</li>
                     <li>Privata per impostazione predefinita, con lettura pubblica facoltativa</li>
                     <li>Verifica in due passaggi con un’app di autenticazione, che puoi rendere obbligatoria per gli amministratori</li>
@@ -111,6 +112,7 @@
                 <ul>
                     <li>Bacheche Kanban con checklist, scadenze, commenti, allegati e cronologia</li>
                     <li>Canvas con forme, note e collegamenti alle pagine, e una versione testuale per i lettori di schermo</li>
+                    <li>Bacheche e canvas che restano privati finché non li condividi con una persona, un ruolo o tutti i membri, in lettura o in modifica</li>
                     <li>Messaggi diretti e chat di gruppo, in cui ognuno può bloccare una persona e segnalare un messaggio</li>
                     <li>Banner di avviso in tutto il sito</li>
                     <li>Profili dei membri con badge e grafico dei contributi</li>
@@ -132,6 +134,7 @@
                 <ul>
                     <li>Interfaccia in italiano, inglese e tedesco, e puoi caricare altre lingue</li>
                     <li>Tema chiaro e tema scuro, con i colori che scegli</li>
+                    <li>Easter egg da tastiera creati dagli amministratori, a partire dal codice Konami</li>
                     <li>Un tour guidato per i nuovi membri, e una modalità semplice che nasconde gli strumenti avanzati</li>
                     <li>Esportazione dei dati personali per ogni membro, ed esportazione e importazione dell’intero sito per gli amministratori</li>
                     <li>API REST con token limitati e webhook <span class="optional">(facoltativo)</span></li>
@@ -207,6 +210,7 @@
                 <tr><th scope="row">Costi e limiti</th><td data-label="Hosting">Il portale li mostra prima che tu crei una wiki. Le nuove wiki partono in prova con una data di scadenza, e puoi chiedere una proroga.</td><td data-label="Il tuo server">Il software è gratuito e la macchina la metti tu.</td></tr>
                 <tr><th scope="row">Aggiornamenti</th><td data-label="Hosting">Li installa l’operatore.</td><td data-label="Il tuo server">Ogni aggiornamento installa il tag di rilascio più recente, con ogni dipendenza fissata dal suo hash. Prima fa un backup e torna indietro se la wiki non riparte. Gli aggiornamenti automatici sono disattivati finché non li attivi, e accettano solo tag di rilascio firmati con chiavi di cui ti fidi, a meno che tu non consenta quelli non firmati.</td></tr>
                 <tr><th scope="row">Backup</th><td data-label="Hosting">L’operatore conserva i backup, e puoi scaricare tu stesso le esportazioni.</td><td data-label="Il tuo server">Pacchetti di backup, più backup cifrati e autenticati in un repository privato GitHub o Forgejo, se li configuri.</td></tr>
+                <tr><th scope="row">Accesso</th><td data-label="Hosting">Ogni wiki ha i propri account. Chi la amministra può anche far accedere i membri con il loro account hosting, oppure accettare solo quello. Lo stesso account ti fa accedere al BananaChat del servizio.</td><td data-label="Il tuo server">Ogni wiki ha i propri account. Se gestisci la piattaforma di hosting, le sue wiki e le app che vi registri possono usarne gli account allo stesso modo.</td></tr>
                 <tr><th scope="row">Il tuo dominio</th><td data-label="Hosting">Sì, quando l’operatore lo consente per la tua wiki.</td><td data-label="Il tuo server">Sì.</td></tr>
                 <tr><th scope="row">Lettura pubblica ed editor visuale delle pagine</th><td data-label="Hosting">Disponibili per la tua wiki su richiesta.</td><td data-label="Il tuo server">Puoi attivarli tu.</td></tr>
                 <tr><th scope="row">Andare via</th><td data-label="Hosting">Esporta l’intera wiki quando vuoi e <a href="https://hosting.bananawiki.com/help/move-to-your-own-server?lang=it">importala sul tuo server</a>.</td><td data-label="Il tuo server">Già sul tuo server.</td></tr>

@@ -10,7 +10,7 @@
 <meta name="description" content="Betreibe BananaGit selbst für deine Projekte: Repositorys, Code-Review, Issues und CI/CD von Gitea, in den Farben von BananaSuite und mit einem signierten Updater, der bei Fehlern zurückrollt.">
 <link rel="stylesheet" href="../style.css?v=39dba552f508">
 <link rel="stylesheet" href="../mascot/mascot.css?v=d0df485fcacd">
-<script src="../mascot/mascot.js?v=a9cfc980d2fd" defer></script>
+<script src="../mascot/mascot.js?v=56b8cd891bb7" defer></script>
 <link rel="icon" type="image/png" href="../img/banana_yellow.png?v=ba9c9053f412">
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png?v=4541d0cbd66c">
 <link rel="alternate" hreflang="en" href="index.html">
@@ -80,6 +80,9 @@
             <tbody>
                 <tr><th scope="row">Aussehen</th><td data-label="Gitea">Die Themes von Gitea.</td><td data-label="BananaGit">Zusätzlich ein helles, ein dunkles und ein automatisches BananaGit-Theme. Das automatische ist der Standard.</td></tr>
                 <tr><th scope="row">Name und Logo</th><td data-label="Gitea">„Gitea“ und die Teetasse.</td><td data-label="BananaGit">„BananaGit“ und die Banane von BananaSuite. In der Fußzeile steht „Powered by Gitea (BananaGit)“.</td></tr>
+                <tr><th scope="row">Startseite</th><td data-label="Gitea">Die Startseite von Gitea.</td><td data-label="BananaGit">Eine kurze Seite mit Logo, Name, deiner Beschreibung und den Schaltflächen zur Anmeldung.</td></tr>
+                <tr><th scope="row">Anmeldung</th><td data-label="Gitea">Passwörter, Passkeys und die OAuth2-Anbieter, die Gitea mitbringt.</td><td data-label="BananaGit">Fügt BananaWiki Hosting als Anbieter hinzu, dazu eine Einstellung, die es zum einzigen Weg der Anmeldung im Web macht.</td></tr>
+                <tr><th scope="row">Easter Eggs</th><td data-label="Gitea">Keine.</td><td data-label="BananaGit">Tastenfolgen, die Administratoren gestalten, etwa der Konami-Code, im Format der ganzen Suite.</td></tr>
                 <tr><th scope="row">Updates</th><td data-label="Gitea">Du ersetzt die Binärdatei selbst.</td><td data-label="BananaGit">Ein Befehl prüft, sichert, installiert, kontrolliert und rollt zurück.</td></tr>
                 <tr><th scope="row">Release-Binärdateien</th><td data-label="Gitea">Viele Plattformen, mit SQLite.</td><td data-label="BananaGit">Linux auf amd64 und arm64, standardmäßig ohne SQLite gebaut.</td></tr>
                 <tr><th scope="row">Forgejo</th><td data-label="Gitea">Kein unterstützter Weg.</td><td data-label="BananaGit">Eine Migration an Ort und Stelle, nur in eine Richtung, die du vorher an einer Kopie proben kannst.</td></tr>
@@ -141,8 +144,8 @@ sudo bananagit-update update</code></pre>
             <h2 id="story-title">Wie es mit BananaWiki zusammenhängt</h2>
         </header>
         <div class="story">
-            <p>Wir haben BananaGit gebaut, um unsere eigenen Git-Projekte zu hosten. Es nutzt dasselbe Bananen-Logo wie BananaWiki und BananaChat und wird getrennt von beiden installiert.</p>
-            <p>Änderungen, die nicht Name, Aussehen oder Updater von BananaGit betreffen, gehören zu <a href="https://github.com/go-gitea/gitea">Gitea</a>. Die Seite <a href="../about/index.de.html">Über uns</a> erzählt die Geschichte der anderen Projekte.</p>
+            <p>Wir haben BananaGit gebaut, um unsere eigenen Git-Projekte zu hosten. Es nutzt dasselbe Bananen-Logo wie BananaWiki und BananaChat und wird getrennt von beiden installiert. Mit einem Konto von BananaWiki Hosting kann man sich anmelden, sobald ein Administrator das eingerichtet hat, wie die <a href="https://github.com/BananaSuite/BananaGit/blob/main/bananagit/docs/bananawiki-hosting-login.md">Anleitung zur Anmeldung</a> (auf Englisch) erklärt.</p>
+            <p>Änderungen, die nicht unter die auf dieser Seite genannten Unterschiede fallen, gehören zu <a href="https://github.com/go-gitea/gitea">Gitea</a>. Luca Zanis Beitrag <a href="https://lucazani.com/blog/bananagit/">BananaGit, and what we’re working on next</a> (auf Englisch) erzählt, warum es auf Gitea aufbaut und was als Nächstes kommt. Die Seite <a href="../about/index.de.html">Über uns</a> erzählt die Geschichte der anderen Projekte.</p>
         </div>
     </div>
 </section>

@@ -177,7 +177,9 @@ stay.
 The banana in each page's header is BananaWiki's mascot, as in the apps' top
 bars: it hops when clicked, eleven clicks in a row put its sunglasses on (kept
 in the browser) and eleven more take them off, and the Konami code sends a
-shower of small bananas. Its files are a port of BananaWiki's
+shower of small bananas. In the apps the key sequences are now the BananaSuite
+easter eggs, which an administrator designs; the site has no settings and
+keeps its one Konami shower in mascot.js. Its files are a port of BananaWiki's
 `bananawiki/core/mascot.py` and `bananawiki/core/static/mascot/`:
 
 * `mascot/mascot.js`: the behaviour. It reads the labels from the button.
