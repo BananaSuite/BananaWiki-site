@@ -710,6 +710,39 @@ def test_bananawiki_capture_enables_api_with_its_plugin():
     assert ("click", 'form[action$="/admin/plugins/api_service/enable"] button') in page.events
 
 
+def test_bananawiki_seed_does_not_set_retired_kanban_access(monkeypatch):
+    module = _module(ROOT / "screenshots" / "bananawiki.py", "site_check_bananawiki_seed")
+    calls = []
+    category_id = 0
+    column_id = 0
+
+    def api(_token, method, path, body=None):
+        nonlocal category_id, column_id
+        calls.append((method, path, body))
+        if method == "GET" and path == "/pages":
+            return {"pages": [{"slug": "home", "is_home": True}]}
+        if method == "POST" and path == "/categories":
+            category_id += 1
+            return {"category": {"id": category_id}}
+        if method == "POST" and path == "/pages":
+            return {"page": {"slug": body["title"].lower().replace(" ", "-")}}
+        if path == "/kanban/boards":
+            return {"board": {"id": 1}}
+        if method == "POST" and path.endswith("/columns"):
+            column_id += 1
+            return {"column": {"id": column_id}}
+        if path == "/canvas":
+            return {"canvas": {"slug": "product-direction"}}
+        return {}
+
+    monkeypatch.setattr(module, "_api", api)
+    made = module._seed("sample-token")
+
+    assert made == {"board": 1, "canvas": "product-direction", "design": "design-principles"}
+    assert not any(method == "PUT" and path == "/settings" for method, path, _body in calls)
+    assert any(method == "POST" and path == "/kanban/boards" for method, path, _body in calls)
+
+
 def test_hosting_requirements_match_the_code(pages):
     """The pages' hosting requirements (optional XFS, BuildKit, Linux x86_64) match the code."""
     quotas = _module(WIKI_SRC / "bananawiki" / "ops" / "tenant_quotas.py", "site_check_tenant_quotas")
