@@ -661,6 +661,55 @@ def _module(path: Path, name: str):
     return module
 
 
+def test_bananawiki_capture_enables_api_with_its_plugin():
+    module = _module(ROOT / "screenshots" / "bananawiki.py", "site_check_bananawiki_capture")
+
+    class Locator:
+        def __init__(self, events):
+            self.events = events
+
+        def locator(self, selector):
+            return self
+
+        def fill(self, value):
+            self.events.append(("fill", value))
+
+        def all(self):
+            return [self]
+
+        def check(self):
+            self.events.append(("check",))
+
+        def click(self):
+            self.events.append(("click",))
+
+        def inner_text(self):
+            return "sample-token"
+
+    class Page:
+        def __init__(self):
+            self.events = []
+
+        def goto(self, url):
+            self.events.append(("goto", url))
+
+        def click(self, selector):
+            self.events.append(("click", selector))
+
+        def wait_for_load_state(self, state):
+            self.events.append(("wait", state))
+
+        def locator(self, selector):
+            return Locator(self.events)
+
+    page = Page()
+    assert module._token(page) == "sample-token"
+    assert [event[1].rsplit("/", 1)[-1] for event in page.events if event[0] == "goto"] == [
+        "plugins", "api-tokens"
+    ]
+    assert ("click", 'form[action$="/admin/plugins/api_service/enable"] button') in page.events
+
+
 def test_hosting_requirements_match_the_code(pages):
     """The pages' hosting requirements (optional XFS, BuildKit, Linux x86_64) match the code."""
     quotas = _module(WIKI_SRC / "bananawiki" / "ops" / "tenant_quotas.py", "site_check_tenant_quotas")
