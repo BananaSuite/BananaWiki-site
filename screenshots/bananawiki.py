@@ -182,8 +182,7 @@ def _seed(token: str) -> dict:
                                                           "category_id": category_id})["page"]["slug"]
     _api(token, "POST", "/pages", {"title": "Meeting notes", "content": "## Monday\n\n- Plan the week.\n"})
     _api(token, "PUT", f"/pages/{home}", {"title": "Our shared workspace", "content": HOME.format(**slugs)})
-    # Boards are for administrators until the wiki opens them; tickets go to people who can open the board
-    _api(token, "PUT", "/settings", {"kanban_access": "all"})
+    # Keep the board private; the screenshots are taken by its administrator owner.
     board = _api(token, "POST", "/kanban/boards", {"title": BOARD[0], "description": BOARD[1],
                                                    "default_columns": False})["board"]["id"]
     for name, tickets in TICKETS.items():
